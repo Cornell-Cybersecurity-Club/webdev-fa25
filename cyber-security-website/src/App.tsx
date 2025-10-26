@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="app">
         <Navbar />
-        <main className="main-content">
+        <main className="max-w-[1200px] mx-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/join" element={<Join />} />
