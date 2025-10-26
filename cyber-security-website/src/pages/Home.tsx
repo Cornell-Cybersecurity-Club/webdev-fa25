@@ -2,7 +2,7 @@ import TextType from "../components/TextType";
 
 const Home = () => {
   return (
-    <div className="page">
+    <div className="page flex justify-center mt-7">
       <TextType
         text={["Cornell Cybersecurity Club"]}
         typingSpeed={150}
