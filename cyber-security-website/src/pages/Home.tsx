@@ -1,8 +1,15 @@
+import TextType from "../components/TextType";
+
 const Home = () => {
   return (
     <div className="page">
-      <h1>Home</h1>
-      <p>Welcome to the Cyber Security Website</p>
+      <TextType
+        text={["Cyber Security Club"]}
+        typingSpeed={150}
+        pauseDuration={1500}
+        showCursor={true}
+        cursorCharacter="_"
+      />
     </div>
   );
 };
