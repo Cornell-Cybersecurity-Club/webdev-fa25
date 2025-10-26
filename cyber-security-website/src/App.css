@@ -1,0 +1,28 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+.main-content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.page h1 {
+  font-family: "Roboto Mono", monospace;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.page p {
+  font-family: "Roboto Mono", monospace;
+  color: var(--color-secondary);
+  font-size: 18px;
+}
