@@ -6,8 +6,8 @@ import LearnMoreButton from "../components/LearnMoreButton";
 const Home = () => {
 
   const title = "Cornell Cybersecurity Club";
-  const titleTypingSpeed = 95;
-  const buttonDelay = title.length * titleTypingSpeed + 0;
+  const titleTypingSpeed = 97;
+  const buttonDelay = title.length * titleTypingSpeed + 80;
 
   return (
     <>
