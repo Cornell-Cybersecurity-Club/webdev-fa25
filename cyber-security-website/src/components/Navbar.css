@@ -5,6 +5,9 @@
   padding: 15px;
   background-color: var(--color-background);
   /* border-bottom: 1px solid var(--color-border); */
+  background: transparent;
+  position: relative;
+  z-index: 50;
 }
 
 .nav-link {

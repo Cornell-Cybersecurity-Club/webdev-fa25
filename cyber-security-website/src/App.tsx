@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Join from "./pages/Join";
 import People from "./pages/People";
 import Contact from "./pages/Contact";
@@ -15,6 +16,7 @@ function App() {
         <main className="max-w-[1200px] mx-auto">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element = {<About />} />
             <Route path="/join" element={<Join />} />
             <Route path="/people" element={<People />} />
             <Route path="/contact" element={<Contact />} />

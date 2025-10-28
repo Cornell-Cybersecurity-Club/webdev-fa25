@@ -1,7 +1,7 @@
 .text-type {
   display: inline-block;
   white-space: pre-wrap;
-  font-size: 3rem;
+  font-size: 4em;
 }
 
 .text-type__cursor {
@@ -13,4 +13,19 @@
 
 .text-type__cursor--hidden {
   display: none;
+}
+
+.hero-title.text-type {
+  display: block;         
+  line-height: 1.7;         
+  margin-top: 15vh;          
+  font-size: 4em;         
+}
+
+/* Only for the typed button */
+.cta-typed.text-type {
+  display: block;         
+  line-height: 1;
+  font-size: 1.1rem;    
+  margin-top: 0.125rem;   
 }
