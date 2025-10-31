@@ -6,12 +6,31 @@ const Navbar = () => {
 
   const navItems = [
     { path: "/", label: "home" },
-    {path: "/about", label: "about"},
+    { path: "/about", label: "about"},
     { path: "/join", label: "join" },
     { path: "/people", label: "people" },
     { path: "/contact", label: "contact" },
     { path: "/ctf", label: "CTF" },
   ];
+
+  const renderLabel = (label: string) => {
+    return (
+      <>
+        <span className="bracket">[</span>
+        {label.split("").map((ch, i) => (
+          <span
+            key={i}
+            className="char"
+            style={{ ['--i' as any]: i } as React.CSSProperties}
+          >
+            <span className="char-inner char-front">{ch}</span>
+            <span className="char-inner char-back">{ch}</span>
+          </span>
+        ))}
+        <span className="bracket">]</span>
+      </>
+    );
+  };
 
   return (
     <nav className="navbar">
@@ -23,7 +42,7 @@ const Navbar = () => {
             location.pathname === item.path ? "active" : ""
           }`}
         >
-          [{item.label}]
+          {renderLabel(item.label)}
         </Link>
       ))}
     </nav>

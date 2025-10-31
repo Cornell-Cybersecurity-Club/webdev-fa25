@@ -4,7 +4,6 @@
   align-items: center;
   padding: 15px;
   background-color: var(--color-background);
-  /* border-bottom: 1px solid var(--color-border); */
   background: transparent;
   position: relative;
   z-index: 50;
@@ -26,4 +25,57 @@
 .nav-link.active {
   color: var(--color-accent);
   font-weight: 500;
+}
+
+.nav-link {
+  display: inline-flex;
+  gap: 0;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.nav-link .bracket {
+  opacity: 0.9;
+  display: inline-block;
+  transform-origin: bottom;
+}
+
+.nav-link .char {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  height: 1em; 
+  vertical-align: middle;
+  overflow: hidden;
+  --delay: calc(var(--i) * 0.1s);
+}
+
+.nav-link .char-inner {
+  display: inline-block;
+  width: auto;
+  will-change: transform, opacity;
+  transition: transform 0.25s cubic-bezier(.2,.8,.2,1), opacity 0.2s ease;
+}
+
+.nav-link .char-front {
+  transform: translateY(0%);
+  transition-delay: var(--delay);
+}
+
+.nav-link .char-back {
+  position: absolute;
+  left: 0;
+  top: 100%; 
+  transform: translateY(0%);
+  transition-delay: var(--delay);
+}
+
+.nav-link:hover .char-front {
+  transform: translateY(-100%);
+  opacity: 0.95;
+}
+
+.nav-link:hover .char-back {
+  transform: translateY(-100%); 
+  opacity: 1;
 }
