@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <MatrixRain fontSize={24} speed={0.3} fpsCap={60} />
 
-      <section className="relative z-10 min-h-screen flex flex-col text-center px-6 mt-20">
+      <section className="relative z-10 max-h-screen flex flex-col text-center px-6 mt-20">
         <div className="flex flex-col items-center">
           <TextType
             text={[title]}
