@@ -13,7 +13,8 @@ function App() {
     <Router>
       <div className="app">
         <Navbar />
-        <main className="max-w-[1200px] mx-auto">
+  {/* make main full width so content can stretch edge-to-edge */}
+  <main className="w-full">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element = {<About />} />
