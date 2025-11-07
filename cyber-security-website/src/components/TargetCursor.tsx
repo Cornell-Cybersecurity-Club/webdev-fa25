@@ -46,9 +46,8 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     if (isMobile || !cursorRef.current) return;
 
     const originalCursor = document.body.style.cursor;
-    if (hideDefaultCursor) {
-      document.body.style.cursor = 'none';
-    }
+    // don't hide the default cursor globally on mount; only hide when over a target
+    let isCursorHidden = false;
 
     const cursor = cursorRef.current;
     cornersRef.current = cursor.querySelectorAll<HTMLDivElement>('.target-cursor-corner');
@@ -186,6 +185,12 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       isActiveRef.current = true;
       gsap.ticker.add(tickerFnRef.current!);
 
+      // hide native cursor when we activate on a target
+      if (hideDefaultCursor && !isCursorHidden) {
+        document.body.style.cursor = 'none';
+        isCursorHidden = true;
+      }
+
       gsap.to(activeStrengthRef.current, { current: 1, duration: hoverDuration, ease: 'power2.out' });
 
       corners.forEach((corner, i) => {
@@ -237,6 +242,11 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
           }
           resumeTimeout = null;
         }, 50);
+        // restore native cursor when leaving target
+        if (hideDefaultCursor && isCursorHidden) {
+          document.body.style.cursor = originalCursor;
+          isCursorHidden = false;
+        }
         cleanupTarget(target);
       };
       currentLeaveHandler = leaveHandler;
@@ -258,7 +268,10 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
         cleanupTarget(activeTarget);
       }
       spinTl.current?.kill();
-      document.body.style.cursor = originalCursor;
+      // restore original cursor on unmount if we changed it
+      if (hideDefaultCursor && isCursorHidden) {
+        document.body.style.cursor = originalCursor;
+      }
       isActiveRef.current = false;
       targetCornerPositionsRef.current = null;
       activeStrengthRef.current.current = 0;
