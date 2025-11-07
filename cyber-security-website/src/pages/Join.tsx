@@ -3,7 +3,7 @@ const Join = () => {
     <div className="text-center py-10 px-5">
       <h1 className="font-['Roboto_Mono'] text-white mb-5">Join</h1>
       <p className="font-['Roboto_Mono'] text-[#e1dad3] text-lg">
-        Join our cyber security community
+        become a cybear?
       </p>
     </div>
   );
