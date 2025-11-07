@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const navItems = [
     { path: "/", label: "home" },
-    {path: "/about", label: "about"},
+    { path: "/about", label: "about" },
     { path: "/join", label: "join" },
     { path: "/people", label: "people" },
     { path: "/contact", label: "contact" },
@@ -15,17 +15,22 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {navItems.map((item) => (
-        <Link
-          key={item.path}
-          to={item.path}
-          className={`nav-link ${
-            location.pathname === item.path ? "active" : ""
-          }`}
-        >
-          [{item.label}]
-        </Link>
-      ))}
+      <div className="flex justify-between w-full">
+        <p>cornellcyber:~/</p>
+        <div className="flex">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`nav-link ${
+                location.pathname === item.path ? "active" : ""
+              }`}
+            >
+              [{item.label}]
+            </Link>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 };
