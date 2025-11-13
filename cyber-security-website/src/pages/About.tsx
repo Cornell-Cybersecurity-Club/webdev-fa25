@@ -1,10 +1,30 @@
 const About = () => {
   return (
     <div className="text-center py-10 px-5">
-      <h1 className="font-['Roboto_Mono'] text-white mb-5">About</h1>
-      <p className="font-['Roboto_Mono'] text-[#e1dad3] text-lg">
-        Learn more about the club. Summary 
-      </p>
+
+      <div className="flex gap-5 justify-center items-center mt-5">
+          <div className="relative w-[700px] h-[200px] border-2 border-white p-[10px] rounded-lg">
+            <p className="absolute -top-[15px] bg-[#101110] text-[#FF3B3B] w-[100px] text-lg"> About Us </p>
+            <p className="mt-8"> We are Cornell University's only student organization for cybersecurity, offering an exhaustive cybersecurity curriculum for both beginners and experienced individuals. Topics range from binary exploitation to cryptography, reverse engineering, and more.</p>
+          </div>
+          <img src="" alt="Picture here" className="w-[200px] h-[80px] ml-30"/>
+        </div>
+
+      <h2 className="text-3xl tracking-wide mb-8 mt-5">What We Do</h2>
+      <div className="flex flex-col items-center mt-5"> 
+          <div className="flex items-center justify-center gap-5 mt-2"> 
+            <img src="" alt="Picture here" className="w-[80px] h-[80px] mr-30"/>
+            <div className="w-[500px] h-[240px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center">
+              <div className="flex justify-center items-center w-[120px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
+                <p className="text-center text-black"> Education </p>
+              </div>
+            <div>
+              <p className="text-center text-black mt-10"> We host weekly technical workshops for our members to learn new skills and put their knowledge to the test.</p>
+            </div>
+            </div> 
+            <img src="" alt="Picture here" className="w-[80px] h-[80px] ml-30"/>
+          </div>
+        </div>
 
       <div>
         <div className="flex gap-5 justify-center items-center mt-5">
@@ -101,6 +121,7 @@ const About = () => {
 
           </div>
         </section>
+        <h2 className="text-3xl tracking-wide mb-8">Core Values</h2>
 
       </div>
 
