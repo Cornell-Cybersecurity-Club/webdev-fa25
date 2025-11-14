@@ -14,12 +14,12 @@ const About = () => {
       <div className="flex flex-col items-center mt-5"> 
           <div className="flex items-center justify-center gap-5 mt-2"> 
             <img src="" alt="Picture here" className="w-[80px] h-[80px] mr-30"/>
-            <div className="w-[500px] h-[240px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center">
+            <div className="w-[500px] h-[180px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center">
               <div className="flex justify-center items-center w-[120px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
                 <p className="text-center text-black"> Education </p>
               </div>
             <div>
-              <p className="text-center text-black mt-10"> We host weekly technical workshops for our members to learn new skills and put their knowledge to the test.</p>
+              <p className="text-center text-black mt-6"> We host weekly technical workshops for our members to learn new skills and put their knowledge to the test.</p>
             </div>
             </div> 
             <img src="" alt="Picture here" className="w-[80px] h-[80px] ml-30"/>
@@ -42,12 +42,12 @@ const About = () => {
         <div className="flex flex-col items-center mt-5"> 
           <div className="flex items-center justify-center gap-5 mt-2"> 
             <img src="" alt="Picture here" className="w-[80px] h-[80px] mr-30"/>
-            <div className="w-[500px] h-[240px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center">
+            <div className="w-[500px] h-[200px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center">
               <div className="flex justify-center items-center w-[120px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
                 <p className="text-center text-black"> Competition </p>
               </div>
             <div>
-              <p className="text-center text-black mt-10"> One of our greatest purposes is to compete in global hacking competitions known as CTFs. Members compete in practice competitions and real events.</p>
+              <p className="text-center text-black mt-6"> One of our greatest purposes is to compete in global hacking competitions known as CTFs. Members compete in practice competitions and real events.</p>
             </div>
             </div> 
             <img src="" alt="Picture here" className="w-[80px] h-[80px] ml-30"/>
