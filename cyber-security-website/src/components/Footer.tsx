@@ -44,6 +44,7 @@ const Footer = () => {
         <a
           href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-white text-center underline"
         >
           Equal Education and Employment
