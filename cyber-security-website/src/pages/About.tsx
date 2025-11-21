@@ -5,20 +5,20 @@ const About = () => {
       {/* Red box with the requested content */}
       <section className="w-full flex justify-center py-8 mb-8">
         <div className="bg-[#FA2136] rounded-xl px-10 py-12 text-center max-w-2xl w-full">
-          <h2 className="text-4xl text-[#0A0A0A] font-['Roboto'] text-left">What is the Cybersecurity Club?</h2>
+          <h2 className="text-4xl text-[#0A0A0A] font-['Roboto_Mono'] text-left">What is the Cybersecurity Club?</h2>
         </div>
       </section>
 
       {/* About Us section from remote */}
       <div className="flex gap-5 justify-center items-center mt-5">
           <div className="relative w-[700px] h-[200px] border-2 border-white p-[10px] rounded-lg">
-            <p className="absolute -top-[15px] bg-[#101110] text-[#FF3B3B] w-[100px] text-lg"> About Us </p>
+            <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[100px] text-lg font-['Roboto_Mono']"> About Us </p>
             <p className="mt-8"> We are Cornell University's only student organization for cybersecurity, offering an exhaustive cybersecurity curriculum for both beginners and experienced individuals. Topics range from binary exploitation to cryptography, reverse engineering, and more.</p>
           </div>
           <img src="" alt="Picture here" className="w-[200px] h-[80px] ml-30"/>
         </div>
 
-      <h2 className="text-3xl tracking-wide mb-8 mt-5">What We Do</h2>
+      <h2 className="text-3xl tracking-wide mb-8 mt-5 font-['Roboto_Mono']">What We Do</h2>
       <div className="flex flex-col items-center mt-5"> 
           <div className="flex items-center justify-center gap-5 mt-2"> 
             <img src="" alt="Picture here" className="w-[80px] h-[80px] mr-30"/>
@@ -37,11 +37,11 @@ const About = () => {
       <div>
         <div className="flex gap-5 justify-center items-center mt-5">
           <div className="relative w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
-            <p className="absolute -top-[15px] bg-[#101110] text-[#FF3B3B] w-[40px] text-lg"> NME </p>
+            <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[40px] text-lg font-['Roboto_Mono']"> NME </p>
             <p> Description Here</p>
           </div>
           <div className="relative w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
-            <p className="absolute -top-[15px] bg-[#101110] text-[#FF3B3B] w-[40px] text-lg"> IME </p>
+            <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[40px] text-lg font-['Roboto_Mono']"> IME </p>
             <p> Description Here</p>
           </div>
         </div>
@@ -78,11 +78,11 @@ const About = () => {
 
         <div className="flex gap-5 justify-center mt-10">
           <div className="relative w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
-            <p className="absolute -top-[15px] bg-[#101110] text-[#FF3B3B] w-[100px] text-lg"> CTF Team </p>
+            <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[100px] text-lg font-['Roboto_Mono']"> CTF Team </p>
             <p> Description Here</p>
           </div>
           <div className="relative w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
-            <p className="absolute -top-[15px] bg-[#101110] text-[#FF3B3B] w-[110px] text-lg"> CCDC Team </p>
+            <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[110px] text-lg font-['Roboto_Mono']"> CCDC Team </p>
             <p> Description Here</p>
           </div>
         </div>
@@ -109,19 +109,19 @@ const About = () => {
 
         {/* --- FEATURED EVENTS --- */}
         <section className="w-full flex flex-col items-center pb-10">
-          <h2 className="text-3xl tracking-wide mb-8">Featured Events</h2>
+          <h2 className="text-3xl tracking-wide mb-8 font-['Roboto_Mono']">Featured Events</h2>
 
           <div className="w-11/12 md:w-4/5 grid grid-cols-1 md:grid-cols-2 gap-10">
 
             {/* Card 1 */}
               <div className=" relative border border-[#E1DAD3] rounded-xl p-6 min-h-[200px]">
-              <h3 className="absolute -top-[15px] bg-[#101110] text-[#FA2136] mb-3 font-semibold tracking-wide w-[50px]">ISTS</h3>
+              <h3 className="absolute -top-[15px] bg-[#0A0A0A] text-[#FA2136] mb-3 font-semibold tracking-wide w-[50px] font-['Roboto_Mono']">ISTS</h3>
               <p className="text-[#E1DAD3] text-sm">Description Here</p>
             </div>
 
             {/* Card 2 */}
             <div className="relative border border-[#E1DAD3] rounded-xl p-6 min-h-[200px]">
-              <h3 className="absolute -top-[15px] bg-[#101110] text-[#FA2136] mb-3 font-semibold tracking-wide w-[320px]">
+              <h3 className="absolute -top-[15px] bg-[#0A0A0A] text-[#FA2136] mb-3 font-semibold tracking-wide w-[320px] font-['Roboto_Mono']">
                 NYC Collegiate Security Meetup
               </h3>
               <p className="text-[#E1DAD3] text-sm">Description Here</p>
@@ -129,7 +129,7 @@ const About = () => {
 
           </div>
         </section>
-        <h2 className="text-3xl tracking-wide mb-8">Core Values</h2>
+        <h2 className="text-3xl tracking-wide mb-8 font-['Roboto_Mono']">Core Values</h2>
 
       </div>
 
