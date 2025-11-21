@@ -40,7 +40,9 @@ const Home = () => {
             premier security & hacking club.
           </h3>
         </div>
-        <Footer />
+        <div className="w-screen m-auto -translate-x-23">
+          <Footer darkBackground />
+        </div>
       </section>
     </div>
   );

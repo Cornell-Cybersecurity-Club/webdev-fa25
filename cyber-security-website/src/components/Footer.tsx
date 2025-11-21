@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+type FooterProps = {
+  /** When true, adds a solid black background behind the footer (used on Home only). */
+  darkBackground?: boolean;
+};
+
+const Footer = ({ darkBackground = false }: FooterProps) => {
   return (
-    <footer className="w-full pb-10 z-1000">
+    <footer
+      className={`w-full pb-10 z-1000 ${darkBackground ? "bg-black" : ""}`}
+    >
       <hr className="border-t border-[#FF3B3B] my-4" />
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-5 justify-center mt-10">
         <img
