@@ -11,48 +11,35 @@ const Navbar = () => {
     { path: "/join", label: "join" },
     { path: "/people", label: "people" },
     { path: "/contact", label: "contact" },
-    { path: "/ctf", label: "CTF" },
+    { path: "/events", label: "events" },
+    { path: "/sponsorship", label: "sponsorship" },
   ];
-
-  const renderLabel = (label: string) => {
-    return (
-      <>
-        <span className="bracket">[</span>
-        {label.split("").map((ch, i) => (
-          <span
-            key={i}
-            className="char"
-            style={{ ["--i" as any]: i } as React.CSSProperties}
-          >
-            <span className="char-inner char-front">{ch}</span>
-            <span className="char-inner char-back">{ch}</span>
-          </span>
-        ))}
-        <span className="bracket">]</span>
-      </>
-    );
-  };
 
   return (
     <nav className="navbar">
       <div className="flex justify-between w-full">
         <p>
           cornellcyber{location.pathname}
-          <FlashingChar character="_"></FlashingChar>
+          <FlashingChar character="_" />
         </p>
-
         <div className="flex">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`nav-link ${
-                location.pathname === item.path ? "active" : ""
-              }`}
+              className={`nav-link ${location.pathname === item.path ? "active" : ""}`}
             >
               [{item.label}]
             </Link>
           ))}
+          
+            href="https://github.com/your-org-name"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+          <a>
+            [education]
+          </a>
         </div>
       </div>
     </nav>
