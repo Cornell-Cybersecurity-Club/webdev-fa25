@@ -50,10 +50,6 @@ const Navbar = () => {
             </Link>
           ))}
           
-            href="https://github.com/your-org-name"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-link"
           <a>
             [education]
           </a>
