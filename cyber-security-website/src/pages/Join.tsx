@@ -1,6 +1,6 @@
 const Join = () => {
   return (
-    <div className="flex flex-col items-center text-center relative">
+    <div className="flex flex-col items-center text-center relative pt-20">
       <h1 className="mt- 50 font-['Roboto_Mono'] text-[#CBC6C6] text-5xl mb-10">
         become a cybear?
       </h1>
