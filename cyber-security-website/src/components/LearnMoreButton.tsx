@@ -10,8 +10,8 @@ const LearnMoreButton = ({ delay = 0 }: LearnMoreButtonProps) => {
   return (
     <TextType
       as={Link}
-      to="/about"
-      text={["learn about us →"]}
+      to="/join"
+      text={["Join us →"]}
       typingSpeed={90}
       initialDelay={delay}
       pauseDuration={0}
