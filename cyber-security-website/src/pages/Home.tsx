@@ -27,10 +27,19 @@ const Home = () => {
           <LearnMoreButton delay={buttonDelay} />
         </div>
 
-        {/* <div>
-          <img src="" alt="Team picture here" />
-          <h3>Master cybersecurity skills and compete in CTFs with Cornell’s premier security & hacking club.</h3> 
-        </div> */}
+          <div className ="flex flex-row pt-[400px] text-center"> 
+
+            <img 
+              src="src/img/fa-25-teamphoto.jpeg" 
+              alt="FA25 Cybersecurity Team Photo"
+              className="mx-auto w-3/5 max-w-[800px] rounded-2xl pb-15"
+            />
+
+            <h3 className="mt-6 text-lg pb-15 ">
+              Master cybersecurity skills and compete in CTFs with Cornell’s premier security & hacking club.
+            </h3>
+
+          </div>
 
       </section>
 

@@ -26,7 +26,7 @@ function App() {
           </Routes>
         </main>
       </div>
-      <div>
+      <div className = "pb-10">
         <hr className="border-t border-[#FF3B3B] my-4"/>
         <div className="flex gap-5 justify-center mt-10">
           <img src="" alt="image here" className="w-[80px] h-[80px] ml-20 mr-20"/>
