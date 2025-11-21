@@ -2,6 +2,23 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import FlashingChar from "./FlashingChar";
 
+type TargetCursorProps = {
+  targetSelector: string;
+  spinDuration?: number;
+  hideDefaultCursor?: boolean;
+  parentSelector?: string;
+  hoverDuration?: number;
+  parallaxOn?: boolean;
+};
+
+/**
+ * Minimal no-op TargetCursor placeholder to satisfy imports and types.
+ * Replace with the real implementation in src/components/TargetCursor.tsx when available.
+ */
+const TargetCursor = (_props: TargetCursorProps) => {
+  return null;
+};
+
 const Navbar = () => {
   const location = useLocation();
 
@@ -42,6 +59,15 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      {/* snappy target cursor for navbar items */}
+      <TargetCursor
+        targetSelector=".cursor-target"
+        spinDuration={0.8}
+        hideDefaultCursor={true}
+        parentSelector=".navbar"
+        hoverDuration={0.06}
+        parallaxOn={false}
+      />
     </nav>
   );
 };
