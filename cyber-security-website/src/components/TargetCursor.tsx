@@ -7,6 +7,7 @@ export interface TargetCursorProps {
   hideDefaultCursor?: boolean;
   hoverDuration?: number;
   parallaxOn?: boolean;
+  parentSelector?: string; // optional: restrict activation to a parent container (e.g. ".navbar")
 }
 
 const TargetCursor: React.FC<TargetCursorProps> = ({
@@ -14,12 +15,13 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   spinDuration = 2,
   hideDefaultCursor = true,
   hoverDuration = 0.2,
-  parallaxOn = true
+  parallaxOn = true,
+  parentSelector
 }) => {
-  const cursorRef = useRef<HTMLDivElement>(null);
+  const cursorRef = useRef<HTMLDivElement | null>(null);
   const cornersRef = useRef<NodeListOf<HTMLDivElement> | null>(null);
   const spinTl = useRef<gsap.core.Timeline | null>(null);
-  const dotRef = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement | null>(null);
 
   const isActiveRef = useRef(false);
   const targetCornerPositionsRef = useRef<{ x: number; y: number }[] | null>(null);
@@ -45,23 +47,32 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   useEffect(() => {
     if (isMobile || !cursorRef.current) return;
 
-    const originalCursor = document.body.style.cursor;
-    // don't hide the default cursor globally on mount; only hide when over a target
-    let isCursorHidden = false;
-
     const cursor = cursorRef.current;
     cornersRef.current = cursor.querySelectorAll<HTMLDivElement>('.target-cursor-corner');
+
+    // store original cursor so we can restore it
+    const originalCursor = document.body.style.cursor;
+    let isCursorHidden = false;
 
     let activeTarget: Element | null = null;
     let currentLeaveHandler: (() => void) | null = null;
     let resumeTimeout: ReturnType<typeof setTimeout> | null = null;
 
-    const cleanupTarget = (target: Element) => {
-      if (currentLeaveHandler) {
-        target.removeEventListener('mouseleave', currentLeaveHandler);
+    const cleanupTarget = (target: Element | null) => {
+      if (!target) return;
+      try {
+        target.removeEventListener('mouseleave', currentLeaveHandler as EventListener);
+      } catch (e) {
+        /* ignore */
       }
       currentLeaveHandler = null;
     };
+
+    // start hidden by default; will show when entering the parent
+    if (cursor) {
+      cursor.style.opacity = '0';
+      cursor.style.pointerEvents = 'none';
+    }
 
     gsap.set(cursor, {
       xPercent: -50,
@@ -74,17 +85,17 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       if (spinTl.current) {
         spinTl.current.kill();
       }
-      spinTl.current = gsap
-        .timeline({ repeat: -1 })
-        .to(cursor, { rotation: '+=360', duration: spinDuration, ease: 'none' });
+      spinTl.current = gsap.timeline({ repeat: -1, paused: true }).to(cursor, {
+        rotation: '+=360',
+        duration: spinDuration,
+        ease: 'none'
+      });
     };
 
     createSpinTimeline();
 
     const tickerFn = () => {
-      if (!targetCornerPositionsRef.current || !cursorRef.current || !cornersRef.current) {
-        return;
-      }
+      if (!targetCornerPositionsRef.current || !cursorRef.current || !cornersRef.current) return;
       const strength = activeStrengthRef.current.current;
       if (strength === 0) return;
       const cursorX = gsap.getProperty(cursorRef.current, 'x') as number;
@@ -111,7 +122,6 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     tickerFnRef.current = tickerFn;
 
     const moveHandler = (e: MouseEvent) => moveCursor(e.clientX, e.clientY);
-    window.addEventListener('mousemove', moveHandler);
 
     const scrollHandler = () => {
       if (!activeTarget || !cursorRef.current) return;
@@ -119,12 +129,12 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       const mouseY = gsap.getProperty(cursorRef.current, 'y') as number;
       const elementUnderMouse = document.elementFromPoint(mouseX, mouseY);
       const isStillOverTarget =
-        elementUnderMouse &&
-        (elementUnderMouse === activeTarget || elementUnderMouse.closest(targetSelector) === activeTarget);
+        elementUnderMouse && (elementUnderMouse === activeTarget || elementUnderMouse.closest(targetSelector) === activeTarget);
       if (!isStillOverTarget) {
         currentLeaveHandler?.();
       }
     };
+    // scroll handling can remain global
     window.addEventListener('scroll', scrollHandler, { passive: true });
 
     const mouseDownHandler = () => {
@@ -139,22 +149,14 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       gsap.to(cursorRef.current, { scale: 1, duration: 0.2 });
     };
 
-    window.addEventListener('mousedown', mouseDownHandler);
-    window.addEventListener('mouseup', mouseUpHandler);
-
+    // helper: when entering a target element
     const enterHandler = (e: MouseEvent) => {
       const directTarget = e.target as Element;
-      const allTargets: Element[] = [];
-      let current: Element | null = directTarget;
-      while (current && current !== document.body) {
-        if (current.matches(targetSelector)) {
-          allTargets.push(current);
-        }
-        current = current.parentElement;
-      }
-      const target = allTargets[0] || null;
+      // find the closest element matching targetSelector starting from target
+      const target = (directTarget.closest && directTarget.closest(targetSelector)) || (directTarget.matches && directTarget.matches(targetSelector) ? directTarget : null);
       if (!target || !cursorRef.current || !cornersRef.current) return;
       if (activeTarget === target) return;
+
       if (activeTarget) {
         cleanupTarget(activeTarget);
       }
@@ -242,31 +244,89 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
           }
           resumeTimeout = null;
         }, 50);
+
         // restore native cursor when leaving target
         if (hideDefaultCursor && isCursorHidden) {
           document.body.style.cursor = originalCursor;
           isCursorHidden = false;
         }
-        cleanupTarget(target);
+
+        cleanupTarget(target as Element);
       };
+
       currentLeaveHandler = leaveHandler;
       target.addEventListener('mouseleave', leaveHandler);
     };
 
-    window.addEventListener('mouseover', enterHandler as EventListener);
+    // top-level: decide where to attach listeners. If a parentSelector is provided, we attach
+    // mouse handlers to that element so the custom cursor only runs while inside that parent.
+    const attachTo = parentSelector ? document.querySelector(parentSelector) : window;
+
+    // parent enter/leave handlers need named refs so we can remove them later
+    let parentEnter: ((e?: Event) => void) | null = null;
+    let parentLeave: ((e?: Event) => void) | null = null;
+
+    if (attachTo instanceof Element) {
+      // show cursor when entering the parent container
+      parentEnter = () => {
+        if (cursor) cursor.style.opacity = '1';
+        if (hideDefaultCursor && !isCursorHidden) {
+          document.body.style.cursor = 'none';
+          isCursorHidden = true;
+        }
+        spinTl.current?.play();
+      };
+      parentLeave = () => {
+        if (cursor) cursor.style.opacity = '0';
+        if (hideDefaultCursor && isCursorHidden) {
+          document.body.style.cursor = originalCursor;
+          isCursorHidden = false;
+        }
+        spinTl.current?.pause();
+      };
+
+      (attachTo as Element).addEventListener('mousemove', moveHandler as EventListener);
+      (attachTo as Element).addEventListener('mouseover', enterHandler as EventListener);
+      (attachTo as Element).addEventListener('mouseenter', parentEnter as EventListener);
+      (attachTo as Element).addEventListener('mouseleave', parentLeave as EventListener);
+      (attachTo as Element).addEventListener('mousedown', mouseDownHandler as EventListener);
+      (attachTo as Element).addEventListener('mouseup', mouseUpHandler as EventListener);
+    } else {
+      // attach globally
+      window.addEventListener('mousemove', moveHandler as EventListener);
+      window.addEventListener('mouseover', enterHandler as EventListener);
+      window.addEventListener('mousedown', mouseDownHandler as EventListener);
+      window.addEventListener('mouseup', mouseUpHandler as EventListener);
+      // ensure cursor visible when app starts
+      if (cursor) cursor.style.opacity = '1';
+      if (hideDefaultCursor && !isCursorHidden) {
+        document.body.style.cursor = 'none';
+        isCursorHidden = true;
+      }
+      spinTl.current?.play();
+    }
+
+    // wire ticker
+    gsap.ticker.add(tickerFnRef.current!);
 
     return () => {
-      if (tickerFnRef.current) {
-        gsap.ticker.remove(tickerFnRef.current);
+      gsap.ticker.remove(tickerFnRef.current!);
+      // remove listeners
+      if (attachTo instanceof Element) {
+        (attachTo as Element).removeEventListener('mousemove', moveHandler as EventListener);
+        (attachTo as Element).removeEventListener('mouseover', enterHandler as EventListener);
+        if (parentEnter) (attachTo as Element).removeEventListener('mouseenter', parentEnter as EventListener);
+        if (parentLeave) (attachTo as Element).removeEventListener('mouseleave', parentLeave as EventListener);
+        (attachTo as Element).removeEventListener('mousedown', mouseDownHandler as EventListener);
+        (attachTo as Element).removeEventListener('mouseup', mouseUpHandler as EventListener);
+      } else {
+        window.removeEventListener('mousemove', moveHandler as EventListener);
+        window.removeEventListener('mouseover', enterHandler as EventListener);
+        window.removeEventListener('mousedown', mouseDownHandler as EventListener);
+        window.removeEventListener('mouseup', mouseUpHandler as EventListener);
       }
-      window.removeEventListener('mousemove', moveHandler);
-      window.removeEventListener('mouseover', enterHandler as EventListener);
       window.removeEventListener('scroll', scrollHandler);
-      window.removeEventListener('mousedown', mouseDownHandler);
-      window.removeEventListener('mouseup', mouseUpHandler);
-      if (activeTarget) {
-        cleanupTarget(activeTarget);
-      }
+      if (activeTarget) cleanupTarget(activeTarget);
       spinTl.current?.kill();
       // restore original cursor on unmount if we changed it
       if (hideDefaultCursor && isCursorHidden) {
@@ -276,7 +336,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       targetCornerPositionsRef.current = null;
       activeStrengthRef.current.current = 0;
     };
-  }, [targetSelector, spinDuration, moveCursor, constants, hideDefaultCursor, isMobile, hoverDuration, parallaxOn]);
+  }, [targetSelector, spinDuration, moveCursor, constants, hideDefaultCursor, isMobile, hoverDuration, parallaxOn, parentSelector]);
 
   useEffect(() => {
     if (isMobile || !cursorRef.current || !spinTl.current) return;
@@ -288,9 +348,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     }
   }, [spinDuration, isMobile]);
 
-  if (isMobile) {
-    return null;
-  }
+  if (isMobile) return null;
 
   return (
     <div
