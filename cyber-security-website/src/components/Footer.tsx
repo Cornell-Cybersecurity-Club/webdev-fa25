@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="pb-10 z-1000">
+    <footer className="w-full pb-10 z-1000">
       <hr className="border-t border-[#FF3B3B] my-4" />
-      <div className="flex gap-5 justify-center mt-10">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-5 justify-center mt-10">
         <img
           src=""
           alt="image here"
           className="w-[80px] h-[80px] ml-20 mr-20"
         />
-        <div className="w-[500px] h-[200px] p-[10px]">
+        <div className="w-full max-w-[500px] h-[200px] p-[10px]">
           <p className="text-[#FF3B3B] text-lg"> Connect </p>
           <p className="text-white">
             Stay connected with the latest Cornell Cybersecurity Club news and
@@ -22,13 +22,13 @@ const Footer = () => {
             <img src="" alt="LinkedIn" className="w-[20px] h-[80px]" />
           </div>
         </div>
-        <div className="w-[500px] h-[200px] p-[10px] ml-10">
+        <div className="w-full max-w-[500px] h-[200px] p-[10px] md:ml-10">
           <p className="text-[#FF3B3B] text-lg"> Join </p>
           <Link to="/join">
             <p className="text-white underline"> New member intake</p>
           </Link>
         </div>
-        <div className="w-[500px] h-[200px] p-[10px]">
+        <div className="w-full max-w-[500px] h-[200px] p-[10px]">
           <p className="text-[#FF3B3B] text-lg"> Contact </p>
           <Link to="/contact">
             <p className="text-white underline"> Contact Us</p>
@@ -54,5 +54,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
