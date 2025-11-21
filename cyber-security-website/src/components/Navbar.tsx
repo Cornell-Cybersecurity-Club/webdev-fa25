@@ -28,31 +28,31 @@ const Navbar = () => {
     { path: "/join", label: "join" },
     { path: "/people", label: "people" },
     { path: "/contact", label: "contact" },
-    { path: "/ctf", label: "CTF" },
+    { path: "/events", label: "events" },
+    { path: "/sponsorship", label: "sponsorship" },
   ];
-
-  // We intentionally render labels inline below (keeps markup simpler for cursor targets)
 
   return (
     <nav className="navbar">
       <div className="flex justify-between w-full">
         <p>
           cornellcyber{location.pathname}
-          <FlashingChar character="_"></FlashingChar>
+          <FlashingChar character="_" />
         </p>
-
         <div className="flex">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`nav-link cursor-target ${
-                location.pathname === item.path ? "active" : ""
-              }`}
+              className={`nav-link ${location.pathname === item.path ? "active" : ""}`}
             >
               [{item.label}]
             </Link>
           ))}
+          
+          <a>
+            [education]
+          </a>
         </div>
       </div>
       {/* snappy target cursor for navbar items */}
