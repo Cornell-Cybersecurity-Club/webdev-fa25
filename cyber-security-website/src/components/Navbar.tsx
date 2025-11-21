@@ -2,6 +2,23 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import FlashingChar from "./FlashingChar";
 
+type TargetCursorProps = {
+  targetSelector: string;
+  spinDuration?: number;
+  hideDefaultCursor?: boolean;
+  parentSelector?: string;
+  hoverDuration?: number;
+  parallaxOn?: boolean;
+};
+
+/**
+ * Minimal no-op TargetCursor placeholder to satisfy imports and types.
+ * Replace with the real implementation in src/components/TargetCursor.tsx when available.
+ */
+const TargetCursor = (_props: TargetCursorProps) => {
+  return null;
+};
+
 const Navbar = () => {
   const location = useLocation();
 
@@ -14,24 +31,7 @@ const Navbar = () => {
     { path: "/ctf", label: "CTF" },
   ];
 
-  const renderLabel = (label: string) => {
-    return (
-      <>
-        <span className="bracket">[</span>
-        {label.split("").map((ch, i) => (
-          <span
-            key={i}
-            className="char"
-            style={{ ["--i" as any]: i } as React.CSSProperties}
-          >
-            <span className="char-inner char-front">{ch}</span>
-            <span className="char-inner char-back">{ch}</span>
-          </span>
-        ))}
-        <span className="bracket">]</span>
-      </>
-    );
-  };
+  // We intentionally render labels inline below (keeps markup simpler for cursor targets)
 
   return (
     <nav className="navbar">
@@ -46,7 +46,7 @@ const Navbar = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`nav-link ${
+              className={`nav-link cursor-target ${
                 location.pathname === item.path ? "active" : ""
               }`}
             >
@@ -55,6 +55,15 @@ const Navbar = () => {
           ))}
         </div>
       </div>
+      {/* snappy target cursor for navbar items */}
+      <TargetCursor
+        targetSelector=".cursor-target"
+        spinDuration={0.8}
+        hideDefaultCursor={true}
+        parentSelector=".navbar"
+        hoverDuration={0.06}
+        parallaxOn={false}
+      />
     </nav>
   );
 };
