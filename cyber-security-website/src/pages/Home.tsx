@@ -10,7 +10,7 @@ const Home = () => {
   const buttonDelay = title.length * titleTypingSpeed + 80;
 
   return (
-    <div className="w-full min-h-screen overflow-x-hidden">
+    <div >
       <MatrixRain fontSize={24} speed={0.3} fpsCap={60} />
 
       <section className="relative flex flex-col text-center px-6 mt-20 cg- max-w-6xl mx-auto">
