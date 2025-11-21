@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 const Join = () => {
   return (
     <div className="flex flex-col items-center text-center relative pt-20">
@@ -40,6 +42,7 @@ const Join = () => {
         ></div>
       </div>
       <div className="mt--5 w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#A00000] overflow-hidden"></div>
+      <Footer />
     </div>
   );
 };
