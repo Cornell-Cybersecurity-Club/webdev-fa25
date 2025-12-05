@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Navbar />
+        <Navbar />*/
         {/* make main full width so content can stretch edge-to-edge */}
         <main className="w-full">
           <Routes>
@@ -28,7 +28,7 @@ function App() {
           </Routes>
         </main>
       </div>
-      <div>
+      {/*div>
         <hr className="border-t border-[#FF3B3B] my-4"/>
         <div className="flex gap-5 justify-center mt-10">
           <img src="" alt="image here" className="w-[80px] h-[80px] ml-20 mr-20"/>
@@ -59,7 +59,7 @@ function App() {
           <p className="text-white text-center">This organization is a registered student organization of Cornell University.</p>
           <a href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment" target="_blank" className="text-white text-center underline"> Equal Education and Employment</a>
         </div>
-      </div>
+      </div>*/}
     </Router>
   );
 }
