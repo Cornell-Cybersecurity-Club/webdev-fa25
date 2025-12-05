@@ -6,42 +6,68 @@ const Join = () => {
       <h1 className="mt- 50 font-['Roboto_Mono'] text-[#CBC6C6] text-5xl mb-10">
         become a cybear?
       </h1>
-      <div className="relative mt-30 w-[600px] h-[300px]">
-        <div
-          className="absolute left-1/2 top-1/2 w-[100px] h-[100px] rounded-full bg-[#A18F8F] border-[5px] border-[#A00000] origin-bottom"
-          style={{
-            transform: "rotate(250deg) translateY(-520px) translateX(-10px)",
-          }}
-        ></div>
+      
+      {/* Main container for bear, circles, lines, and semi-circle */}
+      <div className="relative w-[600px] h-[600px] flex items-end justify-center">
+        {/* Bear image - positioned so only head (chin up) peeks out, behind semicircle */}
+        <img
+          src="/cybear.jpeg"
+          alt="Cybear mascot"
+          className="absolute left-1/2 bottom-[95px] -translate-x-1/2 z-10 w-[400px] h-auto object-contain"
+        />
+        
+        {/* Circles - using absolute positioning with calculated coordinates */}
+        {/* Center point: (300px, 0) relative to container */}
+        {/* Each circle at radius 550px from center */}
+        {/* Starting at -70deg (20deg above horizontal) to avoid touching bottom */}
+        {/* Ending at 70deg, spanning 140deg total with even 23.33deg spacing */}
+        
+        {[
+          { angle: -70, date: '08/28', bg: '#A18F8F' },
+          { angle: -46.67, date: '10/26', bg: '#736A6A' },
+          { angle: -23.33, date: '10/30', bg: '#736A6A' },
+          { angle: 0, date: null, bg: '#D9D9D9' },
+          { angle: 23.33, date: '11/05', bg: '#736A6A' },
+          { angle: 46.67, date: '12/15', bg: '#736A6A' },
+          { angle: 70, date: '01/20', bg: '#736A6A' },
+        ].map(({ angle, date, bg }) => {
+          const rad = (angle * Math.PI) / 180;
+          const radius = 550;
+          const circleSize = 120;
+          const halfCircle = circleSize / 2;
+          
+          // Calculate position from center (300, 0)
+          const left = 300 + radius * Math.sin(rad) - halfCircle;
+          const bottom = radius * Math.cos(rad) - halfCircle;
+          
+          return (
+            <div
+              key={angle}
+              className="absolute w-[120px] h-[120px] rounded-full border-[5px] border-[#A00000] flex items-center justify-center z-10"
+              style={{
+                left: `${left}px`,
+                bottom: `${bottom}px`,
+                backgroundColor: bg,
+              }}
+            >
+              {date && (
+                <span className="font-['Roboto_Mono'] text-white text-base">
+                  {date}
+                </span>
+              )}
+            </div>
+          );
+        })}
 
-        <div
-          className="absolute left-1/2 top-1/2 w-[100px] h-[100px] rounded-full bg-[#736A6A] border-[5px] border-[#A00000] origin-bottom"
-          style={{
-            transform: "rotate(10deg) translateY(-240px) translateX(-50px)",
-          }}
-        ></div>
-
-        <div
-          className="absolute left-1/2 top-1/2 w-[100px] h-[100px] rounded-full bg-[#736A6Agit] border-[5px] border-[#A00000] origin-bottom"
-          style={{
-            transform:
-              "rotate(100deg) translateY(-460px) translateX(20px) translateX(50px)",
-          }}
-        ></div>
-
-        <div
-          className="absolute left-1/2 top-1/2 w-[100px] h-[100px] rounded-full bg-[#D9D9D9] border-[5px] border-[#A00000] origin-bottom"
-          style={{
-            transform: "rotate(60deg) translateY(-300px) translateX(-20px)",
-          }}
-        ></div>
-
-        <div
-          className="absolute left-1/2 top-1/2 w-[100px] h-[100px] rounded-full bg-[#736A6A] border-[5px] border-[#A00000] origin-bottom"
-          style={{ transform: "rotate(300deg) translateY(-340px)" }}
-        ></div>
+        {/* Semi-circle status display - positioned on top */}
+        <div className="relative w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#A00000] overflow-hidden z-20 flex flex-col items-center justify-center">
+          <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-xl mb-2">applications...</p>
+          <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-xl">
+            status: <span className="text-[#00FF00]">open</span>
+          </p>
+        </div>
       </div>
-      <div className="mt--5 w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#A00000] overflow-hidden"></div>
+      
       <Footer />
     </div>
   );
