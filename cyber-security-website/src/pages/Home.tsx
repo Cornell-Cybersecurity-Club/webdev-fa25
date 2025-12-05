@@ -10,8 +10,10 @@ const Home = () => {
   const buttonDelay = title.length * titleTypingSpeed + 80;
 
   return (
-    <div >
-      <MatrixRain fontSize={24} speed={0.3} fpsCap={60} />
+    <div className="relative overflow-hidden">
+      <div className="h-screen overflow-hidden">
+        <MatrixRain fontSize={24} speed={0.3} fpsCap={60} />
+      </div>
 
       <section className="relative flex flex-col text-center px-6 mt-20 cg- max-w-6xl mx-auto">
         <div className="flex flex-col items-center">
@@ -40,7 +42,7 @@ const Home = () => {
             premier security & hacking club.
           </h3>
         </div>
-          <Footer darkBackground />
+        <Footer darkBackground />
       </section>
     </div>
   );
