@@ -24,12 +24,12 @@ const Join = () => {
         
         {[
           { angle: -70, date: '08/28', bg: '#A18F8F' },
-          { angle: -46.67, date: '10/26', bg: '#736A6A' },
+          { angle: -46.67, date: '10/26', bg: '#8B7E7E' },
           { angle: -23.33, date: '10/30', bg: '#736A6A' },
-          { angle: 0, date: null, bg: '#D9D9D9' },
-          { angle: 23.33, date: '11/05', bg: '#736A6A' },
-          { angle: 46.67, date: '12/15', bg: '#736A6A' },
-          { angle: 70, date: '01/20', bg: '#736A6A' },
+          { angle: 0, date: '09/15', bg: '#B8B8B8' },
+          { angle: 23.33, date: '11/05', bg: '#6B5F5F' },
+          { angle: 46.67, date: '12/15', bg: '#857777' },
+          { angle: 70, date: '01/20', bg: '#7A6E6E' },
         ].map(({ angle, date, bg }) => {
           const rad = (angle * Math.PI) / 180;
           const radius = 550;
