@@ -7,18 +7,17 @@ import People from "./pages/People";
 import Contact from "./pages/Contact";
 import CTF from "./pages/CTF";
 import "./App.css";
-import { Link } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Navbar />
-  {/* make main full width so content can stretch edge-to-edge */}
-  <main className="w-full">
+        {/* make main full width so content can stretch edge-to-edge */}
+        <main className="w-full">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element = {<About />} />
+            <Route path="/about" element={<About />} />
             <Route path="/join" element={<Join />} />
             <Route path="/people" element={<People />} />
             <Route path="/contact" element={<Contact />} />
@@ -59,7 +58,6 @@ function App() {
         </div>
       </div>
     </Router>
-
   );
 }
 
