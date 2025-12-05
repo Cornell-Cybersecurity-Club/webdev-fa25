@@ -103,7 +103,7 @@ src=""
 alt="Picture here"
 className="w-[80px] h-[80px] mr-30"
 />
-<div className="w-full max-w-[500px] h-[240px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center mt-5">
+<div className="w-full max-w-[500px] h-[300px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center mt-5">
 <div className="flex justify-center items-center w-[150px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
 <p className="text-center text-black"> What is a CTF? </p>
 </div>
