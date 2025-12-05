@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Navbar />
+        <Navbar />*/
         {/* make main full width so content can stretch edge-to-edge */}
         <main className="w-full">
           <Routes>
