@@ -177,19 +177,63 @@ ISTS
 <p className="text-[#E1DAD3] text-sm">Description Here</p>
 </div>
 
-{/* Card 2 */}
-<div className="relative border border-[#E1DAD3] rounded-xl p-6 min-h-[200px]">
-<h3 className="absolute -top-[15px] bg-[#0A0A0A] text-[#FA2136] mb-3 font-semibold tracking-wide w-[320px] font-['Roboto_Mono']">
-NYC Collegiate Security Meetup
-</h3>
-<p className="text-[#E1DAD3] text-sm">Description Here</p>
-</div>
-</div>
+            {/* Card 2 */}
+            <div className="relative border border-[#E1DAD3] rounded-xl p-6 min-h-[200px]">
+              <h3 className="absolute -top-[15px] bg-[#0A0A0A] text-[#FA2136] mb-3 font-semibold tracking-wide w-[320px] font-['Roboto_Mono']">
+                NYC Collegiate Security Meetup
+              </h3>
+              <p className="text-[#E1DAD3] text-sm">Description Here</p>
+            </div>
+          </div>
+        </section>
+
+        {/* --- CORE VALUES (Square Bracket Style) --- */}
+<section className="w-full flex flex-col items-center pb-16 mt-4">
+  <h2 className="text-3xl tracking-wide mb-16 font-['Roboto_Mono']">
+    Core Values
+  </h2>
+
+  <div className="w-11/12 md:w-4/5 flex flex-col md:flex-row items-center justify-between gap-16">
+
+    {[1,2,3].map((i)=>(
+      <div key={i} className="flex flex-col items-center gap-4">
+
+        {/* Bracket Icon Container */}
+        <div className="relative flex items-center justify-center h-24 w-24 text-[#FA2136]">
+
+          {/* left bracket */}
+          <span className="absolute left-0 top-1/2 -translate-y-1/2 text-4xl font-bold select-none">
+            [
+          </span>
+
+          {/* right bracket */}
+          <span className="absolute right-0 top-1/2 -translate-y-1/2 text-4xl font-bold select-none">
+            ]
+          </span>
+
+          {/* Inside text or icon */}
+          <span className="text-xs uppercase tracking-widest">
+            Icon
+          </span>
+        </div>
+
+        {/* Description label */}
+        <p className="text-xs md:text-sm uppercase tracking-[0.25em] text-center">
+          Expand On Value
+        </p>
+
+      </div>
+    ))}
+  </div>
+
+  {/* Divider Line */}
+  <div className="w-11/12 md:w-4/5 mt-24">
+    <div className="border-t border-[#FA2136]" />
+  </div>
 </section>
-<h2 className="text-3xl tracking-wide mb-8 font-['Roboto_Mono']">
-Core Values
-</h2>
-</div>
+
+
+      </div>
 
 <Footer />
 </div>
