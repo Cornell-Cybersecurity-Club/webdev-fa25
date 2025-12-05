@@ -5,7 +5,8 @@ import About from "./pages/About";
 import Join from "./pages/Join";
 import People from "./pages/People";
 import Contact from "./pages/Contact";
-import CTF from "./pages/CTF";
+//import Events from "./pages/Events";;
+import Sponsorship from "./pages/Sponsorship.tsx";
 import "./App.css";
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
             <Route path="/join" element={<Join />} />
             <Route path="/people" element={<People />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/ctf" element={<CTF />} />
+            <Route path="/sponsorship" element={<Sponsorship />} /> 
           </Routes>
         </main>
       </div>
