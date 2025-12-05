@@ -34,9 +34,9 @@ function App() {
             <p className="text-[#FF3B3B] text-lg"> Connect </p>
             <p className="text-white"> Stay connected with the latest Cornell Cybersecurity Club news and events</p>
             <div className="flex gap-10 mt-4">
-              <img src="" alt="Discord" className="w-[20px] h-[80px]"/>
-              <img src="" alt="Instagram" className="w-[20px] h-[80px]"/>
-              <img src="" alt="LinkedIn" className="w-[20px] h-[80px]"/>
+              <img src="public/disc_logo.png" alt="Discord" className="w-[50px] h-[80px]"/>
+              <img src="public/instafin_logo.png" alt="Instagram" className="w-[50px] h-[80px]"/>
+              <img src="public/link_logo2.png" alt="LinkedIn" className="w-[50px] h-[80px]"/>
             </div>
           </div>
           <div className="w-[500px] h-[200px] p-[10px] ml-10">
