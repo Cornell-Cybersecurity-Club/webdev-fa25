@@ -27,7 +27,9 @@ function App() {
             <Route path="/sponsorship" element={<Sponsorship />} />
           </Routes>
         </main>
-        <Footer />
+        <div className="z-500">
+          <Footer />
+        </div>
       </div>
       {/*div>
         <hr className="border-t border-[#FF3B3B] my-4"/>

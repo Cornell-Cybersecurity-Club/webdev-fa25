@@ -1,26 +1,55 @@
 "use client";
+import { useRef, useEffect, useState } from "react";
 import TextType from "../components/TextType";
 import MatrixRain from "../components/Matrix";
 import LearnMoreButton from "../components/LearnMoreButton";
-import Footer from "@/components/Footer";
 
 const Home = () => {
   const title = "Cornell Cybersecurity Club";
   const titleTypingSpeed = 97;
   const buttonDelay = title.length * titleTypingSpeed + 80;
+  // const sectionRef = useRef<HTMLElement>(null);
+  // const [maxHeight, setMaxHeight] = useState(window.innerHeight);
+
+  // useEffect(() => {
+  //   const updateMaxHeight = () => {
+  //     if (sectionRef.current) {
+  //       const sectionHeight = sectionRef.current.offsetHeight;
+  //       setMaxHeight(window.innerHeight + sectionHeight);
+  //     }
+  //   };
+
+  //   // Initial measurement
+  //   updateMaxHeight();
+
+  //   // Update on window resize
+  //   window.addEventListener("resize", updateMaxHeight);
+
+  //   // Use ResizeObserver to watch for section size changes
+  //   const resizeObserver = new ResizeObserver(() => {
+  //     updateMaxHeight();
+  //   });
+
+  //   if (sectionRef.current) {
+  //     resizeObserver.observe(sectionRef.current);
+  //   }
+
+  //   return () => {
+  //     window.removeEventListener("resize", updateMaxHeight);
+  //     resizeObserver.disconnect();
+  //   };
+  // }, []);
 
   return (
-    <div className="relative">
+    <div>
       <div className="absolute top-0 left-0 right-0 h-screen overflow-hidden z-0 pointer-events-none">
-        <MatrixRain
-          fontSize={24}
-          speed={0.3}
-          fpsCap={60}
-          maxHeight={window.innerHeight}
-        />
+        <MatrixRain fontSize={24} speed={0.3} fpsCap={60} />
       </div>
 
-      <section className="relative flex flex-col text-center mt-20 mx-auto z-10">
+      <section
+        // ref={sectionRef}
+        className="relative flex flex-col text-center mt-20 mx-auto z-10"
+      >
         <div className="flex flex-col items-center">
           <TextType
             text={[title]}
