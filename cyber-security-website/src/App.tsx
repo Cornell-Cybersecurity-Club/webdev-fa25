@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import Sponsorship from "./pages/Sponsorship.tsx";
 import "./App.css";
 import { Link } from "react-router-dom";
-
+import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
@@ -24,9 +24,10 @@ function App() {
             <Route path="/join" element={<Join />} />
             <Route path="/people" element={<People />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/sponsorship" element={<Sponsorship />} /> 
+            <Route path="/sponsorship" element={<Sponsorship />} />
           </Routes>
         </main>
+        <Footer />
       </div>
       {/*div>
         <hr className="border-t border-[#FF3B3B] my-4"/>

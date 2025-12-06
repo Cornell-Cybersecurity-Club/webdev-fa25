@@ -2,17 +2,19 @@
 import { useEffect, useRef } from "react";
 
 type Props = {
-  color?: string;      
-  fontSize?: number;   
-  fpsCap?: number;    
-  speed?: number;    
+  color?: string;
+  fontSize?: number;
+  fpsCap?: number;
+  speed?: number;
+  maxHeight?: number; // Maximum height in pixels
 };
 
 export default function MatrixRain({
-  color = "#5c5f5e",     
-  fontSize = 22,         
+  color = "#5c5f5e",
+  fontSize = 22,
   fpsCap,
-  speed = 0.3,           
+  speed = 0.3,
+  maxHeight,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
@@ -25,16 +27,17 @@ export default function MatrixRain({
     const setSize = () => {
       const dpr = Math.max(1, window.devicePixelRatio || 1);
       const { innerWidth: w, innerHeight: h } = window;
+      const canvasHeight = maxHeight ? Math.min(h, maxHeight) : h;
       canvas.style.width = `${w}px`;
-      canvas.style.height = `${h}px`;
+      canvas.style.height = `${canvasHeight}px`;
       canvas.width = Math.floor(w * dpr);
-      canvas.height = Math.floor(h * dpr);
+      canvas.height = Math.floor(canvasHeight * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       initColumns();
     };
 
     let columns: number[] = [];
-    const columnWidth = fontSize; 
+    const columnWidth = fontSize;
     const initColumns = () => {
       const count = Math.ceil(window.innerWidth / columnWidth);
       columns = new Array(count)
@@ -45,9 +48,8 @@ export default function MatrixRain({
     const bgFade = 0.08;
     const glyphs = ["0", "1"];
 
-
     let frame = 0;
-    const step = Math.max(1, Math.round(1 / speed)); 
+    const step = Math.max(1, Math.round(1 / speed));
     // const fade = Math.min(0.95, bgFade / step);
 
     const draw = (now: number) => {
@@ -69,6 +71,10 @@ export default function MatrixRain({
 
       frame++;
 
+      const maxCanvasHeight = maxHeight
+        ? Math.min(window.innerHeight, maxHeight)
+        : window.innerHeight;
+
       for (let i = 0; i < columns.length; i++) {
         const x = i * columnWidth;
         const y = columns[i] * fontSize;
@@ -77,10 +83,10 @@ export default function MatrixRain({
           const char = glyphs[(Math.random() * glyphs.length) | 0];
           ctx.fillText(char, x, y);
 
-          if (y > window.innerHeight && Math.random() > 0.975) {
+          if (y > maxCanvasHeight && Math.random() > 0.975) {
             columns[i] = Math.floor(Math.random() * -20);
           } else {
-            columns[i]++; 
+            columns[i]++;
           }
         }
       }
@@ -98,12 +104,15 @@ export default function MatrixRain({
       window.removeEventListener("resize", setSize);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [color, fontSize, fpsCap, speed]);
+  }, [color, fontSize, fpsCap, speed, maxHeight]);
+
+  const canvasStyle = maxHeight ? { height: `${maxHeight}px` } : {};
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-0 pointer-events-none"
+      className="absolute top-0 left-0 right-0 w-full h-full pointer-events-none"
+      style={canvasStyle}
       aria-hidden="true"
     />
   );

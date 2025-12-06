@@ -10,10 +10,17 @@ const Home = () => {
   const buttonDelay = title.length * titleTypingSpeed + 80;
 
   return (
-    <div >
-      <MatrixRain fontSize={24} speed={0.3} fpsCap={60} />
+    <div className="relative">
+      <div className="absolute top-0 left-0 right-0 h-screen overflow-hidden z-0 pointer-events-none">
+        <MatrixRain
+          fontSize={24}
+          speed={0.3}
+          fpsCap={60}
+          maxHeight={window.innerHeight}
+        />
+      </div>
 
-      <section className="relative flex flex-col text-center px-6 mt-20 cg- max-w-6xl mx-auto">
+      <section className="relative flex flex-col text-center mt-20 mx-auto z-10">
         <div className="flex flex-col items-center">
           <TextType
             text={[title]}
@@ -28,7 +35,7 @@ const Home = () => {
           <LearnMoreButton delay={buttonDelay} />
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-6 pt-[400px] text-center">
+        <div className="flex flex-col md:flex-row items-center gap-6 pt-[400px] text-center max-w-6xl mx-auto">
           <img
             src="src/img/fa-25-teamphoto.jpeg"
             alt="FA25 Cybersecurity Team Photo"
@@ -40,7 +47,6 @@ const Home = () => {
             premier security & hacking club.
           </h3>
         </div>
-          <Footer darkBackground />
       </section>
     </div>
   );
