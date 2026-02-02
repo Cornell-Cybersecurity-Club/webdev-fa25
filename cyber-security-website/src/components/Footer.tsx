@@ -25,12 +25,12 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
           </p>
           <div className="flex gap-10 mt-4">
             <img
-              src="/discord_logo.png"
+              src="/red_discord_logo.png"
               alt="Discord"
               className="w-[40px] h-[40px]"
             />
             <img
-              src="/insta_logo.png"
+              src="/red_gram_logo.png"
               alt="Instagram"
               className="w-[40px] h-[40px]]"
             />
