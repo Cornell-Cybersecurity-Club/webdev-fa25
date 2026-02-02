@@ -1,8 +1,8 @@
-import Footer from "../components/Footer";
+import Footer from "@/components/Footer";
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen bg-[#0A0A0A] text-[#E1DAD3] flex flex-col items-center pt-20 overflow-x-hidden">
+    <div className="w-full min-h-screen bg-[#000000] text-[#E1DAD3] flex flex-col items-center pt-20 overflow-x-hidden">
       {/* Red box with the requested content */}
       <section className="w-full flex justify-center py-8 mb-8">
         <div className="bg-[#FA2136] rounded-xl px-10 py-12 text-center max-w-2xl w-full">
@@ -186,12 +186,49 @@ const About = () => {
             </div>
           </div>
         </section>
-        <h2 className="text-3xl tracking-wide mb-8 font-['Roboto_Mono']">
-          Core Values
-        </h2>
-      </div>
 
-      <Footer />
+        {/* --- CORE VALUES (Square Bracket Style) --- */}
+        <section className="w-full flex flex-col items-center pb-16 mt-4">
+          <h2 className="text-3xl tracking-wide mb-16 font-['Roboto_Mono']">
+            Core Values
+          </h2>
+
+          <div className="w-11/12 md:w-4/5 flex flex-col md:flex-row items-center justify-between gap-16">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="flex flex-col items-center gap-4">
+                {/* Bracket Icon Container */}
+                <div className="relative flex items-center justify-center h-24 w-24 text-[#FA2136]">
+                  {/* left bracket */}
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 text-4xl font-bold select-none">
+                    [
+                  </span>
+
+                  {/* right bracket */}
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 text-4xl font-bold select-none">
+                    ]
+                  </span>
+
+                  {/* Inside text or icon */}
+                  <span className="text-xs uppercase tracking-widest">
+                    Icon
+                  </span>
+                </div>
+
+                {/* Description label */}
+                <p className="text-xs md:text-sm uppercase tracking-[0.25em] text-center">
+                  Expand On Value
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Divider Line */}
+          {/*<div className="w-11/12 md:w-4/5 mt-24">
+            <div className="border-t border-[#FA2136]" />
+          </div>*/}
+        </section>
+      </div>
+      
     </div>
   );
 };

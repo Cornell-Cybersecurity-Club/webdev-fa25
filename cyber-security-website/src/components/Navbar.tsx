@@ -50,7 +50,7 @@ const Navbar = () => {
             </Link>
           ))}
           
-          <a>
+          <a href = "https://cornell-cybersecurity-club.github.io/">
             [education]
           </a>
         </div>

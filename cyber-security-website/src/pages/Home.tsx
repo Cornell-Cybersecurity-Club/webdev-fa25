@@ -1,19 +1,55 @@
 "use client";
+import { useRef, useEffect, useState } from "react";
 import TextType from "../components/TextType";
 import MatrixRain from "../components/Matrix";
 import LearnMoreButton from "../components/LearnMoreButton";
-import Footer from "@/components/Footer";
 
 const Home = () => {
   const title = "Cornell Cybersecurity Club";
   const titleTypingSpeed = 97;
   const buttonDelay = title.length * titleTypingSpeed + 80;
+  // const sectionRef = useRef<HTMLElement>(null);
+  // const [maxHeight, setMaxHeight] = useState(window.innerHeight);
+
+  // useEffect(() => {
+  //   const updateMaxHeight = () => {
+  //     if (sectionRef.current) {
+  //       const sectionHeight = sectionRef.current.offsetHeight;
+  //       setMaxHeight(window.innerHeight + sectionHeight);
+  //     }
+  //   };
+
+  //   // Initial measurement
+  //   updateMaxHeight();
+
+  //   // Update on window resize
+  //   window.addEventListener("resize", updateMaxHeight);
+
+  //   // Use ResizeObserver to watch for section size changes
+  //   const resizeObserver = new ResizeObserver(() => {
+  //     updateMaxHeight();
+  //   });
+
+  //   if (sectionRef.current) {
+  //     resizeObserver.observe(sectionRef.current);
+  //   }
+
+  //   return () => {
+  //     window.removeEventListener("resize", updateMaxHeight);
+  //     resizeObserver.disconnect();
+  //   };
+  // }, []);
 
   return (
-    <div >
-      <MatrixRain fontSize={24} speed={0.3} fpsCap={60} />
+    <div>
+      <div className="absolute top-0 left-0 right-0 h-screen overflow-hidden z-0 pointer-events-none">
+        <MatrixRain fontSize={24} speed={0.3} fpsCap={60} />
+      </div>
 
-      <section className="relative flex flex-col text-center px-6 mt-20 cg- max-w-6xl mx-auto">
+      <section
+        // ref={sectionRef}
+        className="relative flex flex-col text-center mt-20 mx-auto z-10"
+      >
         <div className="flex flex-col items-center">
           <TextType
             text={[title]}
@@ -28,7 +64,7 @@ const Home = () => {
           <LearnMoreButton delay={buttonDelay} />
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-6 pt-[400px] text-center">
+        <div className="flex flex-col md:flex-row items-center gap-6 pt-[400px] text-center max-w-6xl mx-auto">
           <img
             src="src/img/fa-25-teamphoto.jpeg"
             alt="FA25 Cybersecurity Team Photo"
@@ -39,9 +75,6 @@ const Home = () => {
             Master cybersecurity skills and compete in CTFs with Cornell’s
             premier security & hacking club.
           </h3>
-        </div>
-        <div className="w-screen m-auto -translate-x-23">
-          <Footer darkBackground />
         </div>
       </section>
     </div>
