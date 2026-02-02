@@ -7,20 +7,17 @@ const Join = () => {
         become a cybear?
       </h1>
       
-      {/* Main container for bear, circles, lines, and semi-circle */}
+      
       <div className="relative w-[600px] h-[600px] flex items-end justify-center">
-        {/* Bear image - positioned so only head (chin up) peeks out, behind semicircle */}
+        {/* Bear image  */}
         <img
           src="/cybear.jpeg"
           alt="Cybear mascot"
           className="absolute left-1/2 bottom-[95px] -translate-x-1/2 z-10 w-[400px] h-auto object-contain"
         />
         
-        {/* Circles - using absolute positioning with calculated coordinates */}
-        {/* Center point: (300px, 0) relative to container */}
-        {/* Each circle at radius 550px from center */}
-        {/* Starting at -70deg (20deg above horizontal) to avoid touching bottom */}
-        {/* Ending at 70deg, spanning 140deg total with even 23.33deg spacing */}
+        {/* Circles */}
+       
         
         {[
           { angle: -70, date: '08/28', bg: '#A18F8F' },
@@ -36,7 +33,7 @@ const Join = () => {
           const circleSize = 120;
           const halfCircle = circleSize / 2;
           
-          // Calculate position from center (300, 0)
+          
           const left = 300 + radius * Math.sin(rad) - halfCircle;
           const bottom = radius * Math.cos(rad) - halfCircle;
           
@@ -59,7 +56,7 @@ const Join = () => {
           );
         })}
 
-        {/* Semi-circle status display - positioned on top */}
+        {/*semi circle display*/}
         <div className="relative w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#A00000] overflow-hidden z-20 flex flex-col items-center justify-center">
           <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-xl mb-2">applications...</p>
           <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-xl">
