@@ -1,9 +1,10 @@
+import Footer from "@/components/Footer";
 const Sponsorship = () => {
   const pdfUrl =
     "https://drive.google.com/file/d/1l6N3hVTod1jawR906S_-viu-ymoqXPbW/view?usp=sharing";
 
   return (
-    <div className="w-full min-h-screen bg-[#0A0A0A] text-[#E1DAD3] flex flex-col items-center pt-24 px-4">
+    <div className="w-full min-h-screen bg-[#000000] text-[#E1DAD3] flex flex-col items-center pt-24 px-4">
       <h1 className="text-3xl md:text-4xl tracking-wide mb-10 font-['Roboto_Mono']">
         Sponsorship
       </h1>

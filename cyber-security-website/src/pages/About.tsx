@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen bg-[#0A0A0A] text-[#E1DAD3] flex flex-col items-center pt-20 overflow-x-hidden">
+    <div className="w-full min-h-screen bg-[#000000] text-[#E1DAD3] flex flex-col items-center pt-20 overflow-x-hidden">
       {/* Red box with the requested content */}
       <section className="w-full flex justify-center py-8 mb-8">
         <div className="bg-[#FA2136] rounded-xl px-10 py-12 text-center max-w-2xl w-full">
