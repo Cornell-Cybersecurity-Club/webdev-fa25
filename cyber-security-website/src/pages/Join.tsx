@@ -7,17 +7,15 @@ const Join = () => {
         become a cybear?
       </h1>
       
-      
+
+      {/* Main container for bear, circles, lines, and semi-circle */}
       <div className="relative w-[600px] h-[600px] flex items-end justify-center">
-        {/* Bear image  */}
+        {/* Bear image - positioned so only chin peeks out, behind semicircle */}
         <img
           src="/cybear.jpeg"
           alt="Cybear mascot"
-          className="absolute left-1/2 bottom-[95px] -translate-x-1/2 z-10 w-[400px] h-auto object-contain"
+          className="absolute left-1/2 bottom-[20px] -translate-x-1/2 z-10 w-[400px] h-auto object-contain"
         />
-        
-        {/* Circles */}
-       
         
         {[
           { angle: -70, date: '08/28', bg: '#A18F8F' },
@@ -32,8 +30,8 @@ const Join = () => {
           const radius = 550;
           const circleSize = 120;
           const halfCircle = circleSize / 2;
-          
-          
+
+          // Calculate position from center (300, 0)
           const left = 300 + radius * Math.sin(rad) - halfCircle;
           const bottom = radius * Math.cos(rad) - halfCircle;
           
@@ -56,7 +54,6 @@ const Join = () => {
           );
         })}
 
-        {/*semi circle display*/}
         <div className="relative w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#A00000] overflow-hidden z-20 flex flex-col items-center justify-center">
           <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-xl mb-2">applications...</p>
           <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-xl">
