@@ -2,7 +2,7 @@ import "./Join.css";
 
 const Join = () => {
   return (
-    <div className="w-full min-h-screen overflow-x-hidden flex flex-col items-center text-center relative">
+    <div className="w-full min-h-screen overflow-x-hidden flex flex-col items-center text-center relative mb-[-30px]">
       <h1 className="mt-12 font-['Roboto_Mono'] text-[#E1DAD3] text-4xl mb-20 flex items-center justify-center gap-0.5">
         become a cybear?
         <span className="cursor-blink text-[#FA2139]">_</span>
@@ -60,8 +60,6 @@ const Join = () => {
           </p>
         </div>
       </div>
-      <div className="mt--5 w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#A00000] overflow-hidden"></div>
-  
     </div>
   );
 };
