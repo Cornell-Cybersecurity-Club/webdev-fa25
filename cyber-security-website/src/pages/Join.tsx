@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import "./Join.css";
 
 const Join = () => {
@@ -61,8 +60,8 @@ const Join = () => {
           </p>
         </div>
       </div>
-
-      <Footer />
+      <div className="mt--5 w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#A00000] overflow-hidden"></div>
+  
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+
 
 const CTF = () => {
   return (
@@ -9,7 +9,6 @@ const CTF = () => {
           Capture The Flag challenges
         </p>
       </div>
-      <Footer />
     </div>
   );
 };

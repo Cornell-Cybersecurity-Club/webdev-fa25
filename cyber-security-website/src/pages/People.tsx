@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-
 const People = () => {
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
@@ -9,7 +7,7 @@ const People = () => {
           Meet our team members
         </p>
       </div>
-      <Footer />
+
     </div>
   );
 };

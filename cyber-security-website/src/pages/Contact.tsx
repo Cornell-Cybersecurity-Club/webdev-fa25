@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+
 
 const Contact = () => {
   return (
@@ -9,7 +9,6 @@ const Contact = () => {
           Get in touch with us
         </p>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -24,9 +24,21 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
             events
           </p>
           <div className="flex gap-10 mt-4">
-            <img src="" alt="Discord" className="w-[20px] h-[80px]" />
-            <img src="" alt="Instagram" className="w-[20px] h-[80px]" />
-            <img src="" alt="LinkedIn" className="w-[20px] h-[80px]" />
+            <img
+              src="/red_discord_logo.png"
+              alt="Discord"
+              className="w-[40px] h-[40px]"
+            />
+            <img
+              src="/red_gram_logo.png"
+              alt="Instagram"
+              className="w-[40px] h-[40px]]"
+            />
+            <img
+              src="/link_logo.png"
+              alt="LinkedIn"
+              className="w-[40px] h-[40px]"
+            />
           </div>
         </div>
         <div className="w-full max-w-[500px] h-[200px] p-[10px] md:ml-10">
