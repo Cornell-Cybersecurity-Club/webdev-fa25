@@ -13,9 +13,9 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
       <hr className="border-t border-[#FF3B3B] my-4" />
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-5 justify-center mt-10">
         <img
-          src=""
+          src="/bear_sticker.png"
           alt="image here"
-          className="w-[80px] h-[80px] ml-20 mr-20"
+          className="w-[150px] h-[150px] ml-20 mr-20"
         />
         <div className="w-full max-w-[500px] h-[200px] p-[10px]">
           <p className="text-[#FF3B3B] text-lg"> Connect </p>
