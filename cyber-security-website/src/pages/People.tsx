@@ -8,7 +8,7 @@ const People = () => {
         </p>
       </div>
 
-        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5">
+        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -17,10 +17,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -32,7 +32,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[100px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-50">
+            <p className="absolute -bottom-[15px] left-3/4 -translate-x-1/2 bg-[#000000] text-white w-[100px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               President{" "}
             </p>
@@ -45,10 +45,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -60,7 +60,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[160px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-35">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[160px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Vice President{" "}
             </p>
@@ -73,10 +73,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -88,7 +88,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[100px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-50">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[100px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Treasurer{" "}
             </p>
@@ -96,7 +96,7 @@ const People = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-15">
+        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-15">
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -105,10 +105,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -120,7 +120,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[100px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-50">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[100px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Secretary{" "}
             </p>
@@ -133,10 +133,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -148,7 +148,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[130px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-40">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[130px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Recruitment{" "}
             </p>
@@ -161,10 +161,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -176,7 +176,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-20">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               New Member Education{" "}
             </p>
@@ -184,7 +184,7 @@ const People = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-15">
+        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-15">
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[135px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -193,10 +193,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -208,7 +208,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-40">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Competitions{" "}
             </p>
@@ -221,10 +221,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -236,7 +236,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-30">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Public Relations{" "}
             </p>
@@ -249,10 +249,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -264,14 +264,14 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-20">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Events & Operations{" "}
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-15">
+        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-15">
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -280,10 +280,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] ml-20 mr-20 mt-20"
+            className="w-[150px] h-[180px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -295,7 +295,7 @@ const People = () => {
                 className="w-[50px] h-[50px]"
                 /> 
             </div>
-            <p className="absolute bg-[#000000] text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2 ml-20">
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Events & Operations{" "}
             </p>
