@@ -28,7 +28,6 @@ const Navbar = () => {
     { path: "/join", label: "join" },
     { path: "/people", label: "people" },
     { path: "/contact", label: "contact" },
-    { path: "/events", label: "events" },
     { path: "/sponsorship", label: "sponsorship" },
   ];
 

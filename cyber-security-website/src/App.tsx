@@ -5,10 +5,8 @@ import About from "./pages/About";
 import Join from "./pages/Join";
 import People from "./pages/People";
 import Contact from "./pages/Contact";
-//import Events from "./pages/Events";;
 import Sponsorship from "./pages/Sponsorship.tsx";
 import "./App.css";
-import { Link } from "react-router-dom";
 import Footer from "./components/Footer.tsx";
 
 function App() {
