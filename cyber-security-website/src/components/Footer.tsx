@@ -49,7 +49,7 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
         </div>
         <div className="w-full max-w-[500px] h-[200px] p-[10px]">
           <p className="text-[#FF3B3B] text-lg"> Contact </p>
-          <Link to="/contact">
+          <Link to="/people">
             <p className="text-white underline"> Contact Us</p>
           </Link>
         </div>
