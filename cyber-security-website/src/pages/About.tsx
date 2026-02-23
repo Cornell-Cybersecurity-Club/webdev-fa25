@@ -103,13 +103,14 @@ const About = () => {
               alt="Picture here"
               className="w-[80px] h-[80px] mr-30"
             />
-            <div className="w-full max-w-[500px] h-[240px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center mt-5">
+            <div className="w-full border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center mt-5">
               <div className="flex justify-center items-center w-[150px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
                 <p className="text-center text-black"> What is a CTF? </p>
               </div>
-              <div>
-                <p className="text-center text-black mt-4">
+              <div className = "h-max">
+                <p className="text-center text-black">
                   {" "}
+          
                   "In cybersecurity, Capture the Flag (CTF) competitions are
                   exercises in which participants, either individually or as
                   part of a team, are challenged to find and exploit
@@ -151,40 +152,15 @@ const About = () => {
             <h2 className="text-xl text-[#0A0A0A] tracking-wide mb-6">
               READY TO JOIN?
             </h2>
-            <button className="bg-[#D9D9D9] text-[#FA2136] px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition">
+            <a href = "/join" className="bg-[#D9D9D9] text-[#FA2136] px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition">
               Join Us
-            </button>
+            </a>
           </div>
         </section>
 
         {/* --- GALLERY PLACEHOLDER SECTION --- */}
         <section className="w-11/12 md:w-4/5 lg:w-3/5 h-64 bg-[#D9D9D9] text-[#0A0A0A] rounded-md flex items-center justify-center mb-8">
           <p className="tracking-wide text-sm">Gallery of pictures??</p>
-        </section>
-
-        {/* --- FEATURED EVENTS --- */}
-        <section className="w-full flex flex-col items-center pb-10">
-          <h2 className="text-3xl tracking-wide mb-8 font-['Roboto_Mono']">
-            Featured Events
-          </h2>
-
-          <div className="w-11/12 md:w-4/5 grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Card 1 */}
-            <div className=" relative border border-[#E1DAD3] rounded-xl p-6 min-h-[200px]">
-              <h3 className="absolute -top-[15px] bg-[#0A0A0A] text-[#FA2136] mb-3 font-semibold tracking-wide w-[50px] font-['Roboto_Mono']">
-                ISTS
-              </h3>
-              <p className="text-[#E1DAD3] text-sm">Description Here</p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="relative border border-[#E1DAD3] rounded-xl p-6 min-h-[200px]">
-              <h3 className="absolute -top-[15px] bg-[#0A0A0A] text-[#FA2136] mb-3 font-semibold tracking-wide w-[320px] font-['Roboto_Mono']">
-                NYC Collegiate Security Meetup
-              </h3>
-              <p className="text-[#E1DAD3] text-sm">Description Here</p>
-            </div>
-          </div>
         </section>
 
         {/* --- CORE VALUES (Square Bracket Style) --- */}

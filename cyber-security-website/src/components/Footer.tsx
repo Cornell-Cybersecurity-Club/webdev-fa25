@@ -13,9 +13,9 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
       <hr className="border-t border-[#FF3B3B] my-4" />
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-5 justify-center mt-10">
         <img
-          src=""
+          src="/bear_sticker.png"
           alt="image here"
-          className="w-[80px] h-[80px] ml-20 mr-20"
+          className="w-[150px] h-[150px] ml-20 mr-20"
         />
         <div className="w-full max-w-[500px] h-[200px] p-[10px]">
           <p className="text-[#FF3B3B] text-lg"> Connect </p>
@@ -25,12 +25,12 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
           </p>
           <div className="flex gap-10 mt-4">
             <img
-              src="/discord_logo.png"
+              src="/red_discord_logo.png"
               alt="Discord"
               className="w-[40px] h-[40px]"
             />
             <img
-              src="/insta_logo.png"
+              src="/red_gram_logo.png"
               alt="Instagram"
               className="w-[40px] h-[40px]]"
             />
@@ -49,7 +49,7 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
         </div>
         <div className="w-full max-w-[500px] h-[200px] p-[10px]">
           <p className="text-[#FF3B3B] text-lg"> Contact </p>
-          <Link to="/contact">
+          <Link to="/people">
             <p className="text-white underline"> Contact Us</p>
           </Link>
         </div>

@@ -26,7 +26,6 @@ const Navbar = () => {
     { path: "/", label: "home" },
     { path: "/about", label: "about" },
     { path: "/join", label: "join" },
-    { path: "/people", label: "people" },
     { path: "/contact", label: "contact" },
     { path: "/sponsorship", label: "sponsorship" },
   ];
@@ -49,7 +48,7 @@ const Navbar = () => {
             </Link>
           ))}
           
-          <a>
+          <a href = "https://cornell-cybersecurity-club.github.io/">
             [education]
           </a>
         </div>
