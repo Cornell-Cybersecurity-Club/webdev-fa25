@@ -103,13 +103,14 @@ const About = () => {
               alt="Picture here"
               className="w-[80px] h-[80px] mr-30"
             />
-            <div className="w-full max-w-[500px] h-[240px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center mt-5">
+            <div className="w-full border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center mt-5">
               <div className="flex justify-center items-center w-[150px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
                 <p className="text-center text-black"> What is a CTF? </p>
               </div>
-              <div>
-                <p className="text-center text-black mt-4">
+              <div className = "h-max">
+                <p className="text-center text-black">
                   {" "}
+          
                   "In cybersecurity, Capture the Flag (CTF) competitions are
                   exercises in which participants, either individually or as
                   part of a team, are challenged to find and exploit

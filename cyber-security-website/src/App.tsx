@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Join from "./pages/Join";
 import People from "./pages/People";
-import Contact from "./pages/Contact";
 //import Events from "./pages/Events";;
 import Sponsorship from "./pages/Sponsorship.tsx";
 import "./App.css";
@@ -23,7 +22,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/join" element={<Join />} />
             <Route path="/people" element={<People />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/sponsorship" element={<Sponsorship />} />
           </Routes>
         </main>
