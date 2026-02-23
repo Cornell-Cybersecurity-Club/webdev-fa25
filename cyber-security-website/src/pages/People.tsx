@@ -45,10 +45,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -73,10 +73,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -105,10 +105,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -133,10 +133,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -161,10 +161,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -193,10 +193,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -221,10 +221,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -249,10 +249,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"
@@ -280,10 +280,10 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[180px] mx-auto mt-20"
+            className="w-[150px] h-[200px] mx-auto mt-20"
             />
             <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <img
                 src="/mail_icon.jpg"
                 alt="mail"

@@ -163,31 +163,6 @@ const About = () => {
           <p className="tracking-wide text-sm">Gallery of pictures??</p>
         </section>
 
-        {/* --- FEATURED EVENTS --- */}
-        <section className="w-full flex flex-col items-center pb-10">
-          <h2 className="text-3xl tracking-wide mb-8 font-['Roboto_Mono']">
-            Featured Events
-          </h2>
-
-          <div className="w-11/12 md:w-4/5 grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Card 1 */}
-            <div className=" relative border border-[#E1DAD3] rounded-xl p-6 min-h-[200px]">
-              <h3 className="absolute -top-[15px] bg-[#0A0A0A] text-[#FA2136] mb-3 font-semibold tracking-wide w-[50px] font-['Roboto_Mono']">
-                ISTS
-              </h3>
-              <p className="text-[#E1DAD3] text-sm">Description Here</p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="relative border border-[#E1DAD3] rounded-xl p-6 min-h-[200px]">
-              <h3 className="absolute -top-[15px] bg-[#0A0A0A] text-[#FA2136] mb-3 font-semibold tracking-wide w-[320px] font-['Roboto_Mono']">
-                NYC Collegiate Security Meetup
-              </h3>
-              <p className="text-[#E1DAD3] text-sm">Description Here</p>
-            </div>
-          </div>
-        </section>
-
         {/* --- CORE VALUES (Square Bracket Style) --- */}
         <section className="w-full flex flex-col items-center pb-16 mt-4">
           <h2 className="text-3xl tracking-wide mb-16 font-['Roboto_Mono']">
