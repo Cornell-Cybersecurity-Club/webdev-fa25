@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Join from "./pages/Join";
 import People from "./pages/People";
-import Contact from "./pages/Contact";
 //import Events from "./pages/Events";;
 import Sponsorship from "./pages/Sponsorship.tsx";
 import "./App.css";
