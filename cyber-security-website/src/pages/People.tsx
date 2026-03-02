@@ -2,10 +2,10 @@ const People = () => {
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
       <div className="text-center py-10 px-5 max-w-4xl mx-auto">
-        <h1 className="font-['Roboto_Mono'] text-white mb-5">People</h1>
-        <p className="font-['Roboto_Mono'] text-[#e1dad3] text-lg">
-          Meet our eboard
-        </p>
+      <h1 className="mt-12 font-['Roboto_Mono'] text-[#E1DAD3] text-4xl mb-10 flex items-center justify-center gap-0.5">
+        meet our team
+        <span className="cursor-blink text-[#FA2139]">_</span>
+      </h1>
       </div>
 
         <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
