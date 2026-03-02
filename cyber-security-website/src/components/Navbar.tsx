@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import FlashingChar from "./FlashingChar";
@@ -21,6 +22,7 @@ const TargetCursor = (_props: TargetCursorProps) => {
 
 const Navbar = () => {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { path: "/", label: "home" },
@@ -30,25 +32,49 @@ const Navbar = () => {
     { path: "/sponsorship", label: "sponsorship" },
   ];
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <nav className="navbar">
-      <div className="flex justify-between w-full">
-        <p>
+      <div className="navbar-inner">
+        <p className="navbar-brand">
           cornellcyber{location.pathname}
           <FlashingChar character="_" />
         </p>
-        <div className="flex">
+        <button
+          type="button"
+          className="navbar-toggle"
+          aria-expanded={isMenuOpen}
+          aria-controls="navbar-menu"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          onClick={() => setIsMenuOpen((current) => !current)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <div
+          id="navbar-menu"
+          className={`navbar-links ${isMenuOpen ? "open" : ""}`}
+        >
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
               className={`nav-link ${location.pathname === item.path ? "active" : ""}`}
+              onClick={() => setIsMenuOpen(false)}
             >
               [{item.label}]
             </Link>
           ))}
-          
-          <a href = "https://cornell-cybersecurity-club.github.io/">
+
+          <a
+            href="https://cornell-cybersecurity-club.github.io/"
+            className="nav-link"
+            onClick={() => setIsMenuOpen(false)}
+          >
             [education]
           </a>
         </div>

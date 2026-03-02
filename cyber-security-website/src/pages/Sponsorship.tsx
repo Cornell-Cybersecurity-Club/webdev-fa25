@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 const Sponsorship = () => {
   const pdfUrl =
     "https://drive.google.com/file/d/1l6N3hVTod1jawR906S_-viu-ymoqXPbW/view?usp=sharing";

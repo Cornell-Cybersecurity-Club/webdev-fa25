@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-
 const About = () => {
   return (
     <div className="w-full min-h-screen bg-[#000000] text-[#E1DAD3] flex flex-col items-center pt-20 overflow-x-hidden">
