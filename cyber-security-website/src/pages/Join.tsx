@@ -1,8 +1,19 @@
 import { useState } from "react";
 import "./Join.css";
 
-const POPUP_SIZE = 160;
-const POPUP_DIRECTIONS = ["right", "left", "right", "down", "left", "right", "left"] as const;
+const POPUP_SIZE = 170;
+const POPUP_UP_OFFSET = 60;
+const POPUP_DIRECTIONS = ["left", "left", "left", "down", "right", "right", "right"] as const;
+
+const POPUP_CONTENT = [
+  { header: "Session Notes", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  { header: "Meeting Log", body: "Sed do eiusmod tempor incididunt ut labore et dolore." },
+  { header: "Briefing", body: "Ut enim ad minim veniam, quis nostrud exercitation." },
+  { header: "Update", body: "Duis aute irure dolor in reprehenderit in voluptate." },
+  { header: "Report", body: "Excepteur sint occaecat cupidatat non proident." },
+  { header: "Summary", body: "Sunt in culpa qui officia deserunt mollit anim." },
+  { header: "Memo", body: "Cillum dolore eu fugiat nulla pariatur excepteur." },
+];
 
 const Join = () => {
   const [openPopups, setOpenPopups] = useState<Set<number>>(new Set());
@@ -100,7 +111,7 @@ const Join = () => {
         {circleData.map(({ left, bottom, date, bg }, i) => (
           <div
             key={i}
-            className="date-circle absolute w-[120px] h-[120px] rounded-full border-[5px] border-[#FF0000] flex items-center justify-center z-10 shadow-[0_0_15px_rgba(255,0,0,0.2)]"
+            className="date-circle absolute w-[120px] h-[120px] rounded-full border-[5px] border-[#FA2139] flex items-center justify-center z-10 shadow-[0_0_15px_rgba(250,33,57,0.2)]"
             style={{
               left: `${left}px`,
               bottom: `${bottom}px`,
@@ -143,9 +154,11 @@ const Join = () => {
           } else {
             popupStyle = {
               left: `${300 - POPUP_SIZE / 2}px`,
-              bottom: `50px`,
+              bottom: `${50 + POPUP_UP_OFFSET + 100}px`,
             };
           }
+
+          const { header, body } = POPUP_CONTENT[i];
 
           return (
             <div
@@ -167,11 +180,15 @@ const Join = () => {
               >
                 ×
               </button>
+              <div className="popup-content">
+                <h3 className="popup-header">{header}</h3>
+                <p className="popup-body">{body}</p>
+              </div>
             </div>
           );
         })}
 
-        <div className="absolute bottom-0 w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#FF0000] overflow-hidden z-20 flex flex-col items-center justify-center gap-2">
+        <div className="absolute bottom-0 w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#FA2139] overflow-hidden z-20 flex flex-col items-center justify-center gap-2">
           <a
             href="https://cornellcyber.club/"
             target="_blank"
