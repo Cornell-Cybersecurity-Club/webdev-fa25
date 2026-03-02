@@ -11,3 +11,42 @@
   animation: cursorBlink 1s ease-in-out infinite;
 }
 
+.date-circle {
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.date-circle:hover {
+  filter: brightness(0.55);
+}
+
+.popup-square {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: white;
+  z-index: 51;
+}
+
+.popup-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #FF0000;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-close:hover {
+  color: #ff4444;
+}
+

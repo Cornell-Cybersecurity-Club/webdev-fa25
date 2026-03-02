@@ -1,6 +1,11 @@
+import { useState } from "react";
 import "./Join.css";
 
+const POPUP_SIZE = 160;
+const POPUP_DIRECTIONS = ["right", "left", "right", "down", "left", "right", "left"] as const;
+
 const Join = () => {
+  const [openPopups, setOpenPopups] = useState<Set<number>>(new Set());
   const circleData = [
     { angle: -70, date: "08/28", bg: "#E1DAD3" },
     { angle: -46.67, date: "10/26", bg: "#D9D9D9" },
@@ -95,12 +100,20 @@ const Join = () => {
         {circleData.map(({ left, bottom, date, bg }, i) => (
           <div
             key={i}
-            className="absolute w-[120px] h-[120px] rounded-full border-[5px] border-[#FF0000] flex items-center justify-center z-10 shadow-[0_0_15px_rgba(255,0,0,0.2)]"
+            className="date-circle absolute w-[120px] h-[120px] rounded-full border-[5px] border-[#FF0000] flex items-center justify-center z-10 shadow-[0_0_15px_rgba(255,0,0,0.2)]"
             style={{
               left: `${left}px`,
               bottom: `${bottom}px`,
               backgroundColor: bg,
             }}
+            onClick={() =>
+              setOpenPopups((prev) => {
+                const next = new Set(prev);
+                if (next.has(i)) next.delete(i);
+                else next.add(i);
+                return next;
+              })
+            }
           >
             <span className="font-['Roboto_Mono'] text-black text-lg font-semibold">
               {date}
@@ -108,10 +121,64 @@ const Join = () => {
           </div>
         ))}
 
+        {[...openPopups].map((i) => {
+          const { left, bottom } = circleData[i];
+          const dir = POPUP_DIRECTIONS[i];
+          const gap = 10;
+          const circleW = 120;
+          const circleH = 120;
+          const offset = (POPUP_SIZE - circleH) / 2;
+
+          let popupStyle: { left: string; bottom: string };
+          if (dir === "right") {
+            popupStyle = {
+              left: `${left + circleW + gap}px`,
+              bottom: `${bottom - offset}px`,
+            };
+          } else if (dir === "left") {
+            popupStyle = {
+              left: `${left - POPUP_SIZE - gap}px`,
+              bottom: `${bottom - offset}px`,
+            };
+          } else {
+            popupStyle = {
+              left: `${300 - POPUP_SIZE / 2}px`,
+              bottom: `50px`,
+            };
+          }
+
+          return (
+            <div
+              key={i}
+              className="popup-square"
+              style={popupStyle}
+            >
+              <button
+                type="button"
+                className="popup-close"
+                onClick={() =>
+                  setOpenPopups((prev) => {
+                    const next = new Set(prev);
+                    next.delete(i);
+                    return next;
+                  })
+                }
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+          );
+        })}
+
         <div className="absolute bottom-0 w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#FF0000] overflow-hidden z-20 flex flex-col items-center justify-center gap-2">
-          <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-4xl font-bold">
+          <a
+            href="https://cornellcyber.club/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-['Roboto_Mono'] text-[#CBC6C6] text-4xl font-bold underline decoration-[#CBC6C6] hover:decoration-white hover:text-white transition-all transition-colors duration-200 cursor-pointer">
             applications...
-          </p>
+          </a>
           <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-3xl">
             status: <span className="text-[#00FF00] font-bold">open</span>
           </p>
