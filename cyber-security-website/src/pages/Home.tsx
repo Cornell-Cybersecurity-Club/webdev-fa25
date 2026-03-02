@@ -1,8 +1,8 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
 import TextType from "../components/TextType";
 import MatrixRain from "../components/Matrix";
 import LearnMoreButton from "../components/LearnMoreButton";
+import CTF from "./CTF";
 
 const Home = () => {
   const title = "Cornell Cybersecurity Club";
@@ -64,17 +64,8 @@ const Home = () => {
           <LearnMoreButton delay={buttonDelay} />
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-6 pt-[400px] text-center max-w-6xl mx-auto">
-          <img
-            src="src/img/fa-25-teamphoto.jpeg"
-            alt="FA25 Cybersecurity Team Photo"
-            className="mx-auto w-3/5 max-w-[800px] rounded-2xl pb-15"
-          />
-
-          <h3 className="mt-6 text-lg pb-15 md:text-left md:ml-6">
-            Master cybersecurity skills and compete in CTFs with Cornell’s
-            premier security & hacking club.
-          </h3>
+        <div className="pt-[400px]">
+          <CTF />
         </div>
       </section>
     </div>
