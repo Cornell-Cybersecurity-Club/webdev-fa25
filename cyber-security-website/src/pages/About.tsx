@@ -35,7 +35,7 @@ const About = () => {
       </h2>
       <div className="flex flex-col items-center mt-5 px-4">
         <div className="flex flex-col md:flex-row items-center justify-center gap-5 mt-2 w-full max-w-[800px]">
-          <img src="" alt="Picture here" className="w-[80px] h-[80px] mr-30" />
+          {/*<img src="" alt="Picture here" className="w-[80px] h-[80px] mr-30" />*/}
           <div className="w-full max-w-[500px] h-[180px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center">
             <div className="flex justify-center items-center w-[120px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
               <p className="text-center text-black"> Education </p>
@@ -48,12 +48,12 @@ const About = () => {
               </p>
             </div>
           </div>
-          <img src="" alt="Picture here" className="w-[80px] h-[80px] ml-30" />
+          {/*<img src="" alt="Picture here" className="w-[80px] h-[80px] ml-30" />*/}
         </div>
       </div>
 
       <div className="w-full px-4">
-        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-5">
+        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-7">
           <div className="relative w-full max-w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[40px] text-lg font-['Roboto_Mono']">
               {" "}
@@ -61,22 +61,36 @@ const About = () => {
             </p>
             <p> Description Here</p>
           </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-7">
           <div className="relative w-full max-w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[40px] text-lg font-['Roboto_Mono']">
               {" "}
-              IME{" "}
+              SWE{" "}
             </p>
-            <p> Description Here</p>
+            <p className="mt-3"> SWE team is the software development wing of Cornell Cyber that applies CS and design skills 
+                towards building tools to support operations. The SWE team is currently developing a command 
+                and control (C2) framework to support the RvB team in competitions and simulate attacks.</p>
           </div>
-        </div>
+          <div className="relative w-full max-w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
+            <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[120px] text-lg font-['Roboto_Mono']">
+              {" "}
+              CTF B Team{" "}
+            </p>
+            <p className="mt-3"> CTF B team is the bridge from NME to competing on our official competition team. Members go through learning 
+                materials, practice CTFs, and specialize in an area in CTF competition.</p>
+          </div>
+       </div>
+
 
         <div className="flex flex-col items-center mt-5">
           <div className="flex flex-col md:flex-row items-center justify-center gap-5 mt-2 w-full max-w-[800px]">
-            <img
+            {/*<img
               src=""
               alt="Picture here"
               className="w-[80px] h-[80px] mr-30"
-            />
+            />*/}
             <div className="w-full max-w-[500px] h-[200px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center">
               <div className="flex justify-center items-center w-[120px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
                 <p className="text-center text-black"> Competition </p>
@@ -90,20 +104,20 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <img
+            {/*<img
               src=""
               alt="Picture here"
               className="w-[80px] h-[80px] ml-30"
-            />
+            />*/}
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-5 mt-2 w-full max-w-[800px]">
-            <img
+            {/*<img
               src=""
               alt="Picture here"
               className="w-[80px] h-[80px] mr-30"
-            />
-            <div className="w-full border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center mt-5">
+            />*/}
+            <div className="w-[500px] border-2 p-[10px] bg-[#E1DAD3] rounded-lg flex flex-col items-center mt-5">
               <div className="flex justify-center items-center w-[150px] h-[30px] border-2 border-black mt-2 bg-[#FF0000]/50">
                 <p className="text-center text-black"> What is a CTF? </p>
               </div>
@@ -119,11 +133,11 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <img
+            {/*<img
               src=""
               alt="Picture here"
               className="w-[80px] h-[80px] ml-30"
-            />
+            />*/}
           </div>
         </div>
 
