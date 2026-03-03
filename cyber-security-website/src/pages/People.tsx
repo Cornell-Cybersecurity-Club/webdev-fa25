@@ -300,6 +300,38 @@ const People = () => {
               Events & Operations{" "}
             </p>
           </div>
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+            <p className="absolute -top-[15px] bg-[#000000] text-white w-[200px] text-md font-['Roboto_Mono'] pl-2 pr-2">
+              {" "}
+              Alexander Schneider{" "}
+            </p>
+            <img
+            src="alex_headshot.jpg"
+            alt="image here"
+            className="w-[260px] h-[280px] mx-auto mt-3"
+            />
+            <p className="pl-15 mt-2"> Major: Computer Science</p>
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center"> 
+                <a href="mailto:as4276@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/alexander-schneider-95376a2b2/" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a>
+            </div>
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
+              {" "}
+              External Affairs{" "}
+            </p>
+          </div>
         </div>
 
     </div>
