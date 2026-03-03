@@ -78,7 +78,7 @@ const About = () => {
               {" "}
               CTF B Team{" "}
             </p>
-            <p className="mt-3"> CTF B team is the bridge from NME to competing on our official competition team. Members go through learning 
+            <p className="mt-9"> CTF B team is the bridge from NME to competing on our official competition team. Members go through learning 
                 materials, practice CTFs, and specialize in an area in CTF competition.</p>
           </div>
        </div>
