@@ -6,25 +6,25 @@ const POPUP_UP_OFFSET = 60;
 const POPUP_DIRECTIONS = ["left", "left", "left", "down", "right", "right", "right"] as const;
 
 const POPUP_CONTENT = [
-  { header: "Session Notes", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { header: "Meeting Log", body: "Sed do eiusmod tempor incididunt ut labore et dolore." },
-  { header: "Briefing", body: "Ut enim ad minim veniam, quis nostrud exercitation." },
-  { header: "Update", body: "Duis aute irure dolor in reprehenderit in voluptate." },
-  { header: "Report", body: "Excepteur sint occaecat cupidatat non proident." },
-  { header: "Summary", body: "Sunt in culpa qui officia deserunt mollit anim." },
-  { header: "Memo", body: "Cillum dolore eu fugiat nulla pariatur excepteur." },
+  { header: "Apps Open", body: "Club applications are now open! Link is attached below." },
+  { header: "Club Fest", body: "Find us at club fest in Barton Hall!" },
+  { header: "Info Session", body: "Join us for our first info session to learn more about the club." },
+  { header: "Info Session", body: "Join us for our second info session to learn more about the club." },
+  { header: "Apps Close!", body: "We are no longer accepting club applications beyond this date. " },
+  { header: "Decisions Out!", body: "Welcoming our new members.." },
+  { header: "Event", body: "Open to everyone, join for CTF!" },
 ];
 
 const Join = () => {
   const [openPopups, setOpenPopups] = useState<Set<number>>(new Set());
   const circleData = [
-    { angle: -70, date: "08/28", bg: "#E1DAD3" },
-    { angle: -46.67, date: "10/26", bg: "#D9D9D9" },
-    { angle: -23.33, date: "10/30", bg: "#CBC6C6" },
-    { angle: 0, date: "09/15", bg: "#B8B8B8" },
-    { angle: 23.33, date: "11/05", bg: "#A5A5A5" },
-    { angle: 46.67, date: "12/15", bg: "#8F8F8F" },
-    { angle: 70, date: "01/20", bg: "#7A7A7A" },
+    { angle: -70, date: "01/23", bg: "#E1DAD3" },
+    { angle: -46.67, date: "01/24", bg: "#D9D9D9" },
+    { angle: -23.33, date: "01/28", bg: "#CBC6C6" },
+    { angle: 0, date: "01/30", bg: "#B8B8B8" },
+    { angle: 23.33, date: "01/31", bg: "#A5A5A5" },
+    { angle: 46.67, date: "02/03", bg: "#8F8F8F" },
+    { angle: 70, date: "02/10", bg: "#7A7A7A" },
   ].map(({ angle, date, bg }) => {
     const rad = (angle * Math.PI) / 180;
     const radius = 550;
