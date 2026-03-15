@@ -15,22 +15,26 @@ const People = () => {
               Raman Khanal{" "}
             </p>
             <img
-            src=""
+            src="raman_headshot.jpg"
             alt="image here"
-            className="w-[150px] h-[200px] mx-auto mt-20"
+            className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15"> Major: </p>
+            <p className="pl-15 mt-4"> Major: Computer Science</p>
             <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <img
-                src="/mail_icon.jpg"
-                alt="mail"
-                className="w-[110px] h-[140px]"
-                />
-                <img
-                src="/link2_icon.avif"
-                alt="link icon here"
-                className="w-[50px] h-[50px]"
-                /> 
+                <a href="mailto:rk677@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/ramankhanal/" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a>
             </div>
             <p className="absolute -bottom-[15px] left-3/4 -translate-x-1/2 bg-[#000000] text-white w-[100px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -43,22 +47,28 @@ const People = () => {
               Jakob Nacanaynay{" "}
             </p>
             <img
-            src=""
+            src="jakob_headshot.png"
             alt="image here"
-            className="w-[150px] h-[200px] mx-auto mt-20"
+            className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <img
-                src="/mail_icon.jpg"
-                alt="mail"
-                className="w-[110px] h-[140px]"
-                />
-                <img
-                src="/link2_icon.avif"
-                alt="link icon here"
-                className="w-[50px] h-[50px]"
-                /> 
+            <p className="pl-8"> Major: Electrical and Computer Engineering</p>
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center"> 
+                <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+                <a href="mailto:jn567@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="www.linkedin.com/in/jakob-nacanaynay-a93706213" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a>
+            </div>
             </div>
             <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[160px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -73,20 +83,24 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[200px] mx-auto mt-20"
+            className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15"> Major: </p>
+            <p className="pl-15 mt-4"> Major: </p>
             <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <img
-                src="/mail_icon.jpg"
-                alt="mail"
-                className="w-[110px] h-[140px]"
-                />
-                <img
-                src="/link2_icon.avif"
-                alt="link icon here"
-                className="w-[50px] h-[50px]"
-                /> 
+                <a href="mailto:cm2259@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="www.linkedin.com/in/clarissa-mcghee" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a> 
             </div>
             <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[100px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -137,10 +151,11 @@ const People = () => {
             <img
             src="sideheadshot.png"
             alt="image here"
-            className="w-[290px] h-[300px] mx-auto mt-3"
+            className="w-[290px] h-[300px] mx-auto mt-3" 
             />
             <p className="pl-11 mt-4"> Major: Information Science</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center"> 
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2
+            "> 
                 <a href="mailto:acv49@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -167,22 +182,26 @@ const People = () => {
               Parth Mittal{" "}
             </p>
             <img
-            src=""
+            src="parth_headshot.jpg"
             alt="image here"
-            className="w-[150px] h-[200px] mx-auto mt-20"
+            className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15"> Major: </p>
+            <p className="pl-15 mt-4"> Major: Computer Science</p>
             <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <img
-                src="/mail_icon.jpg"
-                alt="mail"
-                className="w-[110px] h-[140px]"
-                />
-                <img
-                src="/link2_icon.avif"
-                alt="link icon here"
-                className="w-[50px] h-[50px]"
-                /> 
+                <a href="mailto:pm653@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/parth-mittal-o6/" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a>
             </div>
             <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -199,22 +218,26 @@ const People = () => {
               Bill Nguyen{" "}
             </p>
             <img
-            src=""
+            src="bill_headshot2.jpg"
             alt="image here"
-            className="w-[150px] h-[200px] mx-auto mt-20"
+            className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15"> Major: </p>
+            <p className="pl-10 mt-4"> Major: Chemical Engineering</p>
             <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <img
-                src="/mail_icon.jpg"
-                alt="mail"
-                className="w-[110px] h-[140px]"
-                />
-                <img
-                src="/link2_icon.avif"
-                alt="link icon here"
-                className="w-[50px] h-[50px]"
-                /> 
+                <a href="mailto:nn347@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/bill-nguyen-0b1878333/" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a> 
             </div>
             <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -229,20 +252,24 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[200px] mx-auto mt-20"
+            className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15"> Major: </p>
+            <p className="pl-15 mt-4"> Major: </p>
             <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <img
-                src="/mail_icon.jpg"
-                alt="mail"
-                className="w-[110px] h-[140px]"
-                />
-                <img
-                src="/link2_icon.avif"
-                alt="link icon here"
-                className="w-[50px] h-[50px]"
-                /> 
+                <a href="mailto:cm2259@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="www.linkedin.com/in/clarissa-mcghee" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a> 
             </div>
             <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -257,20 +284,24 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[200px] mx-auto mt-20"
+            className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15"> Major: </p>
+            <p className="pl-15 mt-4"> Major: Computer Science</p>
             <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <img
-                src="/mail_icon.jpg"
-                alt="mail"
-                className="w-[110px] h-[140px]"
-                />
-                <img
-                src="/link2_icon.avif"
-                alt="link icon here"
-                className="w-[50px] h-[50px]"
-                /> 
+                <a href="mailto:bc678@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/buster-coden" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a>
             </div>
             <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -288,20 +319,24 @@ const People = () => {
             <img
             src=""
             alt="image here"
-            className="w-[150px] h-[200px] mx-auto mt-20"
+            className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <img
-                src="/mail_icon.jpg"
-                alt="mail"
-                className="w-[110px] h-[140px]"
-                />
-                <img
-                src="/link2_icon.avif"
-                alt="link icon here"
-                className="w-[50px] h-[50px]"
-                /> 
+            <p className="pl-10"> Major: Industrial and Labor Relations</p>
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center"> 
+                <a href="mailto:jxb4@cornell.edu">
+                  <img
+                  src="/mail_icon2.jpg"
+                  alt="mail"
+                  className="w-[100px] h-[70px]"
+                  />
+                </a>
+                <a href="www.linkedin.com/in/jack-britton-a93282245" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="/link2_icon.avif"
+                  alt="link icon here"
+                  className="w-[50px] h-[50px]"
+                  /> 
+                </a> 
             </div>
             <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[210px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
