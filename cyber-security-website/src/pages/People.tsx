@@ -61,7 +61,7 @@ const People = () => {
                   className="w-[100px] h-[70px]"
                   />
                 </a>
-                <a href="www.linkedin.com/in/jakob-nacanaynay-a93706213" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/jakob-nacanaynay-a93706213" target="_blank" rel="noopener noreferrer">
                   <img
                   src="/link2_icon.avif"
                   alt="link icon here"
@@ -87,14 +87,14 @@ const People = () => {
             />
             <p className="pl-15 mt-4"> Major: </p>
             <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <a href="mailto:cm2259@cornell.edu">
+                <a href="mailto:">
                   <img
                   src="/mail_icon2.jpg"
                   alt="mail"
                   className="w-[100px] h-[70px]"
                   />
                 </a>
-                <a href="www.linkedin.com/in/clarissa-mcghee" target="_blank" rel="noopener noreferrer">
+                <a href="" target="_blank" rel="noopener noreferrer">
                   <img
                   src="/link2_icon.avif"
                   alt="link icon here"
@@ -130,7 +130,7 @@ const People = () => {
                   className="w-[100px] h-[70px]"
                   />
                 </a>
-                <a href="www.linkedin.com/in/clarissa-mcghee" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/clarissa-mcghee" target="_blank" rel="noopener noreferrer">
                   <img
                   src="/link2_icon.avif"
                   alt="link icon here"
@@ -256,14 +256,14 @@ const People = () => {
             />
             <p className="pl-15 mt-4"> Major: </p>
             <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <a href="mailto:cm2259@cornell.edu">
+                <a href="mailto:">
                   <img
                   src="/mail_icon2.jpg"
                   alt="mail"
                   className="w-[100px] h-[70px]"
                   />
                 </a>
-                <a href="www.linkedin.com/in/clarissa-mcghee" target="_blank" rel="noopener noreferrer">
+                <a href="" target="_blank" rel="noopener noreferrer">
                   <img
                   src="/link2_icon.avif"
                   alt="link icon here"
@@ -330,7 +330,7 @@ const People = () => {
                   className="w-[100px] h-[70px]"
                   />
                 </a>
-                <a href="www.linkedin.com/in/jack-britton-a93282245" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/jack-britton-a93282245" target="_blank" rel="noopener noreferrer">
                   <img
                   src="/link2_icon.avif"
                   alt="link icon here"
