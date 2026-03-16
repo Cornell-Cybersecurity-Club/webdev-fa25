@@ -8,11 +8,11 @@ const POPUP_DIRECTIONS = ["left", "left", "left", "down", "right", "right", "rig
 const POPUP_CONTENT = [
   { header: "Apps Open", body: "Club applications are now open! Link is attached below." },
   { header: "Club Fest", body: "Find us at club fest in Barton Hall!" },
-  { header: "Info Session", body: "Join us for our first info session to learn more about the club." },
-  { header: "Info Session", body: "Join us for our second info session to learn more about the club." },
+  { header: "Info Session", body: "Join us for our info session in RPCC to learn more about the club." },
+  { header: "Info Session", body: "Join us for our info session in RPCC to learn more about the club." },
   { header: "Apps Close!", body: "We are no longer accepting club applications beyond this date. " },
   { header: "Decisions Out!", body: "Welcoming our new members.." },
-  { header: "Event", body: "Open to everyone, join for CTF!" },
+  { header: "Join Us!", body: "Stay tuned for next semester!" },
 ];
 
 const Join = () => {
@@ -190,7 +190,7 @@ const Join = () => {
 
         <div className="absolute bottom-0 w-[600px] h-[300px] bg-[#494141] rounded-t-full border-[30px] border-b-0 border-[#FA2139] overflow-hidden z-20 flex flex-col items-center justify-center gap-2">
           <a
-            href="https://cornellcyber.club/"
+            href="https://docs.google.com/forms/u/0/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-['Roboto_Mono'] text-[#CBC6C6] text-4xl font-bold underline decoration-[#CBC6C6] hover:decoration-white hover:text-white transition-all transition-colors duration-200 cursor-pointer">
