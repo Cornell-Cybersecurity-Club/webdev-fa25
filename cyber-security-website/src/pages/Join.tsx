@@ -17,6 +17,7 @@ const POPUP_CONTENT = [
 
 const Join = () => {
   const [openPopups, setOpenPopups] = useState<Set<number>>(new Set());
+  
   const circleData = [
     { angle: -70, date: "01/23", bg: "#E1DAD3" },
     { angle: -46.67, date: "01/24", bg: "#D9D9D9" },
@@ -41,21 +42,18 @@ const Join = () => {
   });
 
   return (
-    <div className="w-full min-h-screen overflow-x-hidden flex flex-col items-center text-center relative bg-black">
-      <h1 className="mt-12 font-['Roboto_Mono'] text-[#E1DAD3] text-4xl mb-20 flex items-center justify-center gap-0.5">
+    <div className="w-full min-h-screen overflow-x-hidden flex flex-col items-center bg-black px-4">
+      <h1 className="mt-8 md:mt-12 font-['Roboto_Mono'] text-[#E1DAD3] text-2xl md:text-4xl mb-4 md:mb-20 flex items-center justify-center gap-0.5">
         become a cybear?
         <span className="cursor-blink text-[#FA2139]">_</span>
       </h1>
 
-      <div className="relative w-[600px] h-[600px] flex justify-center -mt-24 top-[60px] mb-11">
-
-        {/*network background thing*/}
+      <div className="relative w-[600px] h-[600px] flex justify-center items-center scale-[0.55] sm:scale-[0.8] md:scale-100 origin-center my-auto">
         <svg
           className="absolute inset-0 w-full h-full z-0 pointer-events-none"
           viewBox="0 0 600 600"
           style={{ overflow: "visible" }}
         >
-          {/*arcs*/}
           {circleData.slice(0, -1).map((p, i) => {
             const next = circleData[i + 1];
             return (
@@ -71,13 +69,12 @@ const Join = () => {
             );
           })}
 
-          {/* scattered satellites/branching */}
           {circleData.map((p, i) => {
             const satellites = [
-              { dx: -90, dy: -50, branchX: -20, branchY: -30 }, // Added branching coordinates
+              { dx: -90, dy: -50, branchX: -20, branchY: -30 },
               { dx: 80, dy: -40, branchX: 30, branchY: -20 },
               { dx: -50, dy: 80, branchX: -10, branchY: 40 },
-              { dx: 40, dy: 60, branchX: 20, branchY: 30 },     // Extra satellite for density
+              { dx: 40, dy: 60, branchX: 20, branchY: 30 },
             ];
 
             return satellites.map((s, j) => {
@@ -88,12 +85,8 @@ const Join = () => {
 
               return (
                 <g key={`sat-${i}-${j}`}>
-                 
                   <line x1={p.centerX} y1={p.centerY} x2={x} y2={y} stroke="#FA2139" strokeWidth="1.5" opacity="0.7" />
-                  
-                 
                   <line x1={x} y1={y} x2={bx} y2={by} stroke="#FA2139" strokeWidth="1" opacity="0.4" />
-                  
                   <circle cx={x} cy={y} r="5" fill={j % 2 === 0 ? "#FA2139" : "#E1DAD3"} />
                   <circle cx={bx} cy={by} r="3" fill="#FA2139" opacity="0.6" />
                 </g>
@@ -140,43 +133,30 @@ const Join = () => {
           const circleH = 120;
           const offset = (POPUP_SIZE - circleH) / 2;
 
-          let popupStyle: { left: string; bottom: string };
+          let popupStyle: React.CSSProperties;
           if (dir === "right") {
-            popupStyle = {
-              left: `${left + circleW + gap}px`,
-              bottom: `${bottom - offset}px`,
-            };
+            popupStyle = { left: `${left + circleW + gap}px`, bottom: `${bottom - offset}px` };
           } else if (dir === "left") {
-            popupStyle = {
-              left: `${left - POPUP_SIZE - gap}px`,
-              bottom: `${bottom - offset}px`,
-            };
+            popupStyle = { left: `${left - POPUP_SIZE - gap}px`, bottom: `${bottom - offset}px` };
           } else {
-            popupStyle = {
-              left: `${300 - POPUP_SIZE / 2}px`,
-              bottom: `${50 + POPUP_UP_OFFSET + 100}px`,
-            };
+            popupStyle = { left: `${300 - POPUP_SIZE / 2}px`, bottom: `${50 + POPUP_UP_OFFSET + 100}px` };
           }
 
           const { header, body } = POPUP_CONTENT[i];
 
           return (
-            <div
-              key={i}
-              className="popup-square"
-              style={popupStyle}
-            >
+            <div key={i} className="popup-square responsive-popup" style={popupStyle}>
               <button
                 type="button"
                 className="popup-close"
-                onClick={() =>
+                onClick={(e) => {
+                  e.stopPropagation();
                   setOpenPopups((prev) => {
                     const next = new Set(prev);
                     next.delete(i);
                     return next;
-                  })
-                }
-                aria-label="Close"
+                  });
+                }}
               >
                 ×
               </button>
@@ -200,8 +180,8 @@ const Join = () => {
             status: <span className="text-[#00FF00] font-bold">open</span>
           </p>
         </div>
-
       </div>
+      <div className="h-12 md:hidden"></div>
     </div>
   );
 };
