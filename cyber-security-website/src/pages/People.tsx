@@ -9,7 +9,7 @@ const People = () => {
       </div>
 
         <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Raman Khanal{" "}
@@ -20,7 +20,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
             <p className="pl-15 mt-4"> Major: Computer Science</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <a href="mailto:rk677@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -41,7 +41,7 @@ const People = () => {
               President{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Jakob Nacanaynay{" "}
@@ -51,9 +51,9 @@ const People = () => {
             alt="image here"
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-8"> Major: Electrical and Computer Engineering</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center"> 
-                <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+            <p className="pl-30 mt-4"> Major: ECE</p>
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center"> 
+                <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <a href="mailto:jn567@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -75,7 +75,7 @@ const People = () => {
               Vice President{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[150px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Cam Mazzacane{" "}
@@ -86,7 +86,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
             <p className="pl-15 mt-4"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <a href="mailto:cm2259@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -110,8 +110,8 @@ const People = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-15">
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Clarissa McGhee{" "}
@@ -122,7 +122,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
             <p className="pl-15 mt-4"> Major: Computer Science</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <a href="mailto:cm2259@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -143,7 +143,7 @@ const People = () => {
               Secretary{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Andrew Visconti{" "}
@@ -154,7 +154,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3" 
             />
             <p className="pl-11 mt-4"> Major: Information Science</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2
             "> 
                 <a href="mailto:acv49@cornell.edu">
                   <img
@@ -176,7 +176,7 @@ const People = () => {
               Recruitment{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Parth Mittal{" "}
@@ -187,7 +187,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
             <p className="pl-15 mt-4"> Major: Computer Science</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <a href="mailto:pm653@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -211,8 +211,8 @@ const People = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-15">
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[135px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Bill Nguyen{" "}
@@ -223,7 +223,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
             <p className="pl-10 mt-4"> Major: Chemical Engineering</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <a href="mailto:nn347@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -244,7 +244,7 @@ const People = () => {
               Competitions{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[165px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Will Rosenthal{" "}
@@ -255,7 +255,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
             <p className="pl-15 mt-4"> Major: </p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <a href="mailto:cm2259@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -276,7 +276,7 @@ const People = () => {
               Public Relations{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Buster Coden{" "}
@@ -287,7 +287,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
             <p className="pl-15 mt-4"> Major: Computer Science</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
                 <a href="mailto:bc678@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -310,8 +310,8 @@ const People = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-15">
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Jack Britton{" "}
@@ -321,8 +321,8 @@ const People = () => {
             alt="image here"
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-10"> Major: Industrial and Labor Relations</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center"> 
+            <p className="pl-30 mt-4"> Major: ILR</p>
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center"> 
                 <a href="mailto:jxb4@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
@@ -343,7 +343,7 @@ const People = () => {
               Events & Operations{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg">
+          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[200px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Alexander Schneider{" "}
@@ -354,7 +354,7 @@ const People = () => {
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
             <p className="pl-15 mt-4"> Major: Computer Science</p>
-            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center"> 
+            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center"> 
                 <a href="mailto:as4276@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
