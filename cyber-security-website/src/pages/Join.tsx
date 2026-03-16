@@ -130,7 +130,7 @@ const Join = () => {
           } else if (dir === "left") {
             popupStyle = { left: `${left - POPUP_SIZE - gap}px`, bottom: `${bottom - offset}px` };
           } else {
-            popupStyle = { left: `${300 - POPUP_SIZE / 2}px`, bottom: `${50 + POPUP_UP_OFFSET + 100}px` };
+            popupStyle = { left: `${300 - POPUP_SIZE / 2}px`, bottom: `${550}px` };
           }
           const { header, body } = POPUP_CONTENT[i];
           return (
