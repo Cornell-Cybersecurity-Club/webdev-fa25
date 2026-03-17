@@ -8,8 +8,9 @@ const People = () => {
       </h1>
       </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
+     
+        <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
+          <div className="relative w-full max-w-[350px] min-h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Raman Khanal{" "}
@@ -41,7 +42,7 @@ const People = () => {
               President{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
+          <div className="relative w-full max-w-[350px] min-h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Jakob Nacanaynay{" "}
@@ -75,7 +76,7 @@ const People = () => {
               Vice President{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
+          <div className="relative w-full max-w-[350px] min-h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[150px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Cam Mazzacane{" "}
@@ -110,8 +111,8 @@ const People = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
+        <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
+          <div className="relative w-full max-w-[350px] min-h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Clarissa McGhee{" "}
@@ -143,7 +144,7 @@ const People = () => {
               Secretary{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
+          <div className="relative w-full max-w-[350px] min-h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Andrew Visconti{" "}
@@ -176,7 +177,7 @@ const People = () => {
               Recruitment{" "}
             </p>
           </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
+          <div className="relative w-full max-w-[350px] min-h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Parth Mittal{" "}
@@ -211,7 +212,7 @@ const People = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
+        <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[135px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -310,7 +311,7 @@ const People = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
+        <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}

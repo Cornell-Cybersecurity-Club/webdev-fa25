@@ -145,7 +145,10 @@ const About = () => {
               {" "}
               CTF Team{" "}
             </p>
-            <p> Description Here</p>
+            <p className="mt-2"> The CTF Team competes in weekly jeopardy-style cybersecurity competitions. 
+                Typical challenges fall into these common categories: Website Exploitation, 
+                Reverse Engineering, Cryptography, and Binary Exploitation. The team also 
+                creates challenges to further expand their understanding with respect to their fields.</p>
           </div>
           <div className="relative w-full max-w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[110px] text-lg font-['Roboto_Mono']">
