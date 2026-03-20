@@ -82,20 +82,20 @@ const People = () => {
               Cam Mazzacane{" "}
             </p>
             <img
-            src=""
+            src="cam2_headshot.jpg"
             alt="image here"
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
-            <p className="pl-15 mt-4"> Major: </p>
+            <p className="pl-15 mt-4"> Major: CS and Math</p>
             <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <a href="mailto:">
+                <a href="mailto:clm357@cornell.edu">
                   <img
                   src="/mail_icon2.jpg"
                   alt="mail"
                   className="w-[100px] h-[70px]"
                   />
                 </a>
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/cam-mazzacane" target="_blank" rel="noopener noreferrer">
                   <img
                   src="/link2_icon.avif"
                   alt="link icon here"
@@ -246,44 +246,12 @@ const People = () => {
             </p>
           </div>
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
-            <p className="absolute -top-[15px] bg-[#000000] text-white w-[165px] text-md font-['Roboto_Mono'] pl-2 pr-2">
-              {" "}
-              Will Rosenthal{" "}
-            </p>
-            <img
-            src=""
-            alt="image here"
-            className="w-[290px] h-[300px] mx-auto mt-3"
-            />
-            <p className="pl-15 mt-4"> Major: </p>
-            <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
-                <a href="mailto:">
-                  <img
-                  src="/mail_icon2.jpg"
-                  alt="mail"
-                  className="w-[100px] h-[70px]"
-                  />
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer">
-                  <img
-                  src="/link2_icon.avif"
-                  alt="link icon here"
-                  className="w-[50px] h-[50px]"
-                  /> 
-                </a> 
-            </div>
-            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
-              {" "}
-              Public Relations{" "}
-            </p>
-          </div>
-          <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Buster Coden{" "}
             </p>
             <img
-            src=""
+            src="buster_headshot.jpg"
             alt="image here"
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
@@ -309,16 +277,13 @@ const People = () => {
               Events & Operations{" "}
             </p>
           </div>
-        </div>
-
-        <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               Jack Britton{" "}
             </p>
             <img
-            src=""
+            src="jack_headshot.jpg"
             alt="image here"
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
@@ -344,6 +309,9 @@ const People = () => {
               Events & Operations{" "}
             </p>
           </div>
+        </div>
+
+        <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
           <div className="relative w-full max-w-[350px] h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
             <p className="absolute -top-[15px] bg-[#000000] text-white w-[200px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
@@ -374,6 +342,43 @@ const People = () => {
             <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
               {" "}
               External Affairs{" "}
+            </p>
+          </div>
+        </div>
+
+        <h1 className="mt-12 font-['Roboto_Mono'] text-[#E1DAD3] text-4xl mb-10 flex items-center justify-center gap-0.5">
+        meet our advisors
+      </h1>
+
+      <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-5">
+          <div className="relative w-full max-w-[350px] min-h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
+            <p className="absolute -top-[15px] bg-[#000000] text-white w-[140px] text-md font-['Roboto_Mono'] pl-2 pr-2">
+              {" "}
+              James Warne{" "}
+            </p>
+            <img
+            src="jay_headshot.avif"
+            alt="image here"
+            className="w-[290px] h-[400px] mx-auto mt-3"
+            />
+            <p className="absolute -bottom-[15px] left-3/4 -translate-x-1/2 bg-[#000000] text-white w-[170px] text-md font-['Roboto_Mono'] pl-2 pr-2">
+              {" "}
+              Industry Advisor{" "}
+            </p>
+          </div>
+          <div className="relative w-full max-w-[350px] min-h-[470px] border-2 border-white p-[10px] rounded-lg mt-8">
+            <p className="absolute -top-[15px] bg-[#000000] text-white w-[250px] text-md font-['Roboto_Mono'] pl-2 pr-2">
+              {" "}
+              Noah Stephens-Davidowitz{" "}
+            </p>
+            <img
+            src="noah_headshot.avif"
+            alt="image here"
+            className="w-[290px] h-[400px] mx-auto mt-3"
+            />
+            <p className="absolute bg-[#000000] -bottom-[15px] left-3/4 -translate-x-1/2 text-white w-[200px] text-md font-['Roboto_Mono'] pl-2 pr-2">
+              {" "}
+              Faculty Advisor{" "}
             </p>
           </div>
         </div>

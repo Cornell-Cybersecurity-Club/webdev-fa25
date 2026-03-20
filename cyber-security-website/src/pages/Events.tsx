@@ -16,9 +16,14 @@ const CTF = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           <div className="border border-gray-400 rounded-xl p-6">
-            <h3 className="text-red-400 text-lg font-bold">ISTS</h3>
+            <h3 className="text-red-400 text-lg font-bold">CCDC</h3>
             <p className="text-sm text-gray-400 mb-4">6/7/25</p>
-            <p className="text-gray-300 mb-4">Description Here</p>
+            <p className="text-gray-300 mb-4">The Collegiate Cyber Defense Competition (CCDC) is a 
+              high-stakes blue teaming competition where teams defend simulated compromised corporate 
+              networks against live hackers (red team). CCDC emphasizes defensive practices and real 
+              world security practices. Teams also have to complete real-world business and administrative 
+              tasks called injects while defending against the constant red team attacks. It tests system 
+              administration and incident response under real-world conditions.</p>
             <div className="w-24 h-24 bg-gray-300" />
           </div>
 

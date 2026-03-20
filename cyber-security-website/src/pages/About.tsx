@@ -17,7 +17,7 @@ const About = () => {
             {" "}
             About Us{" "}
           </p>
-          <p className="mt-8">
+          <p className="mt-8 w-[600px] ml-5">
             {" "}
             We are Cornell University's only student organization for
             cybersecurity, offering an exhaustive cybersecurity curriculum for
@@ -28,7 +28,7 @@ const About = () => {
         <img src="" alt="Picture here" className="w-[200px] h-[80px] ml-30" />
       </div>
 
-      <h2 className="text-3xl tracking-wide mb-8 mt-5 font-['Roboto_Mono']">
+      <h2 className="text-3xl tracking-wide mb-8 mt-10 font-['Roboto_Mono']">
         What We Do
       </h2>
       <div className="flex flex-col items-center mt-5 px-4">
@@ -51,7 +51,7 @@ const About = () => {
       </div>
 
       <div className="w-full px-4">
-        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-7">
+        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-10">
           <div className="relative w-full max-w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[40px] text-lg font-['Roboto_Mono']">
               {" "}
@@ -61,7 +61,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-7">
+        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-10">
           <div className="relative w-full max-w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
             <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[40px] text-lg font-['Roboto_Mono']">
               {" "}
@@ -82,7 +82,7 @@ const About = () => {
        </div>
 
 
-        <div className="flex flex-col items-center mt-5">
+        <div className="flex flex-col items-center mt-10">
           <div className="flex flex-col md:flex-row items-center justify-center gap-5 mt-2 w-full max-w-[800px]">
             {/*<img
               src=""
@@ -151,18 +151,21 @@ const About = () => {
                 creates challenges to further expand their understanding with respect to their fields.</p>
           </div>
           <div className="relative w-full max-w-[500px] h-[200px] border-2 border-white p-[10px] rounded-lg">
-            <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[110px] text-lg font-['Roboto_Mono']">
+            <p className="absolute -top-[15px] bg-[#0A0A0A] text-[#FF3B3B] w-[200px] text-lg font-['Roboto_Mono']">
               {" "}
-              CCDC Team{" "}
+              Red vs Blue Team{" "}
             </p>
-            <p> Description Here</p>
+            <p className="mt-2"> The Red vs. Blue Team is our premier attack-and-defense unit, dedicated to understanding 
+                how real-world enterprise systems are compromised and how to defend them effectively. Members 
+                primarily take on defensive (Blue Team) roles since most of our competitions require us to act 
+                as the Blue Team under a simulated attack.</p>
           </div>
         </div>
       </div>
 
       <div className="w-full min-h-screen text-[#E1DAD3] flex flex-col items-center">
         {/* --- JOIN SECTION --- */}
-        <section className="w-full flex justify-center py-20">
+        <section className="w-full flex justify-center py-10">
           <div className="bg-[#FA2136] rounded-xl px-10 py-12 text-center max-w-2xl w-full">
             <h2 className="text-xl text-[#0A0A0A] tracking-wide mb-6">
               READY TO JOIN?
