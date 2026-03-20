@@ -82,7 +82,7 @@ const People = () => {
               Cam Mazzacane{" "}
             </p>
             <img
-            src="cam2_headshot.jpg"
+            src="cam_headshot2.png"
             alt="image here"
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
@@ -219,7 +219,7 @@ const People = () => {
               Bill Nguyen{" "}
             </p>
             <img
-            src="bill_headshot2.jpg"
+            src="bill_headshot3.jpg"
             alt="image here"
             className="w-[290px] h-[300px] mx-auto mt-3"
             />
