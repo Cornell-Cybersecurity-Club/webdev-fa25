@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Join.css";
 
 const POPUP_SIZE = 170;
-const POPUP_UP_OFFSET = 60;
 const POPUP_DIRECTIONS = ["left", "left", "left", "down", "right", "right", "right"] as const;
 
 const POPUP_CONTENT = [
