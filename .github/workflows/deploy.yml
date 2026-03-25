@@ -1,20 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ] # Or your default branch name
+
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    # This sets the default directory for all 'run' steps in this job
+    defaults:
+      run:
+        working-directory: cyber-security-website
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install and Build
-        # This tells the runner to 'cd' into the folder before running
-        working-directory: ./cyber-security-website
-        run: |
-          npm install
-          npm run build
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: cyber-security-website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
 
       - name: Deploy
-        # Again, ensure we are in the correct directory for gh-pages to find 'dist'
-        working-directory: ./cyber-security-website
-        run: npm run deploy
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
