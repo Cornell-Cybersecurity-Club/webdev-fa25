@@ -1,0 +1,20 @@
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install and Build
+        # This tells the runner to 'cd' into the folder before running
+        working-directory: ./cyber-security-website
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy
+        # Again, ensure we are in the correct directory for gh-pages to find 'dist'
+        working-directory: ./cyber-security-website
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
