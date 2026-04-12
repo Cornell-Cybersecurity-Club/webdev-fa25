@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Join.css";
+import cybear from "../assets/cybear.jpeg";
 
 const POPUP_SIZE = 170;
 const POPUP_DIRECTIONS = ["left", "left", "left", "down", "right", "right", "right"] as const;
@@ -100,7 +101,7 @@ const Join = () => {
         </svg>
 
         <img
-          src="/cybear.jpeg"
+          src={cybear}
           alt="Cybear mascot"
           className="absolute left-1/2 bottom-[50px] -translate-x-1/2 z-10 w-[400px] h-auto object-contain"
         />

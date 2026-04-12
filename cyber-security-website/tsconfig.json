@@ -10,6 +10,8 @@
       "@/*": ["./src/*"]
     },
     "forceConsistentCasingInFileNames": true,
-    "strict": true
+    "strict": true,
+    "jsx": "react-jsx", // or "react" for older versions
+    "jsxImportSource": "react" // for React 17+ or other frameworks like "vue"
   }
 }

@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import bearSticker from "../assets/bear_sticker.png";
+import redDiscordLogo from "../assets/red_discord_logo.png";
+import redGramLogo from "../assets/red_gram_logo.png";
+import linkLogo from "../assets/link_logo.png";
 
 type FooterProps = {
   /** When true, adds a solid black background behind the footer (used on Home only). */
@@ -13,7 +17,7 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
       <hr className="border-t border-[#FF3B3B] my-4" />
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-5 justify-center mt-10">
         <img
-          src="/bear_sticker.png"
+          src={bearSticker}
           alt="image here"
           className="w-[150px] h-[150px] ml-20 mr-20"
         />
@@ -25,17 +29,17 @@ const Footer = ({ darkBackground = false }: FooterProps) => {
           </p>
           <div className="flex gap-10 mt-4">
             <img
-              src="/red_discord_logo.png"
+              src={redDiscordLogo}
               alt="Discord"
               className="w-[40px] h-[40px]"
             />
             <img
-              src="/red_gram_logo.png"
+              src={redGramLogo}
               alt="Instagram"
               className="w-[40px] h-[40px]]"
             />
             <img
-              src="/link_logo.png"
+              src={linkLogo}
               alt="LinkedIn"
               className="w-[40px] h-[40px]"
             />
