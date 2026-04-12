@@ -28,7 +28,7 @@ const About = () => {
             exploitation to cryptography, reverse engineering, and more.
           </p>
         </div>
-        <img src={groupPhoto} alt="Picture here" className="w-[200px] h-[80px] ml-30" />
+        <img src={groupPhoto} alt="Picture here" className="w-[300px] h-[200px] ml-30 object-cover" />
       </div>
 
       <h2 className="text-3xl tracking-wide mb-8 mt-10 font-['Roboto_Mono']">
@@ -60,7 +60,7 @@ const About = () => {
               {" "}
               NME{" "}
             </p>
-            <p> Description Here</p>
+            <p> New Member Education (NME) provides the basics for beginners in cybersecurity to get started in competing and finding what specializations they may be interested in through interactive CTF problems.</p>
           </div>
         </div>
 
