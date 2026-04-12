@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <div className="w-full min-h-screen bg-[#000000] text-[#E1DAD3] flex flex-col items-center pt-20 overflow-x-hidden">
@@ -170,9 +172,9 @@ const About = () => {
             <h2 className="text-xl text-[#0A0A0A] tracking-wide mb-6">
               READY TO JOIN?
             </h2>
-            <a href = "/join" className="bg-[#D9D9D9] text-[#FA2136] px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition">
+            <Link to="/join" className="bg-[#D9D9D9] text-[#FA2136] px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition">
               Join Us
-            </a>
+            </Link>
           </div>
         </section>
 
