@@ -2,20 +2,23 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Or your default branch name
+    branches: [ main ]
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
-    # This sets the default directory for all 'run' steps in this job
     defaults:
       run:
         working-directory: cyber-security-website
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,11 +36,18 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          npx gh-pages -d dist --nojekyll
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: cyber-security-website/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
