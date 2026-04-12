@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import groupPhoto from "../assets/fa-25-teamphoto.jpeg";
 
 const About = () => {
   return (
@@ -27,7 +28,7 @@ const About = () => {
             exploitation to cryptography, reverse engineering, and more.
           </p>
         </div>
-        <img src="" alt="Picture here" className="w-[200px] h-[80px] ml-30" />
+        <img src={groupPhoto} alt="Picture here" className="w-[200px] h-[80px] ml-30" />
       </div>
 
       <h2 className="text-3xl tracking-wide mb-8 mt-10 font-['Roboto_Mono']">
