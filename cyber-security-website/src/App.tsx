@@ -11,7 +11,7 @@ import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/webdev-fa25">
       <div className="app">
         <Navbar />
         {/* make main full width so content can stretch edge-to-edge */}
