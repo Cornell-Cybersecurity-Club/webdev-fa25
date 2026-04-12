@@ -179,12 +179,14 @@ const About = () => {
         </section>
 
         {/* --- GALLERY PLACEHOLDER SECTION --- */}
-        <section className="w-11/12 md:w-4/5 lg:w-3/5 h-64 bg-[#D9D9D9] text-[#0A0A0A] rounded-md flex items-center justify-center mb-8">
+        <section className="w-11/12 md:w-4/5 lg:w-3/5 h-64 bg-[#D9D9D9] text-[#0A0A0A] rounded-md flex items-center justify-center mb-8 d hidden">
+        {/* Remove hidden when set */}
           <p className="tracking-wide text-sm">Gallery of pictures??</p>
         </section>
 
         {/* --- CORE VALUES (Square Bracket Style) --- */}
-        <section className="w-full flex flex-col items-center pb-16 mt-4">
+        <section className="w-full flex flex-col items-center pb-16 mt-4 hidden">
+        {/* Remove hidden when set */}
           <h2 className="text-3xl tracking-wide mb-16 font-['Roboto_Mono']">
             Core Values
           </h2>

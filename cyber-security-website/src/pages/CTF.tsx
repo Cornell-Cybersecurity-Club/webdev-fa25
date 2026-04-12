@@ -48,6 +48,7 @@ const CTF = () => {
         </div>
 
         {/* Archived Events */}
+        {/*
         <h2 className="text-3xl mb-8 text-center">Archived Events</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -65,6 +66,7 @@ const CTF = () => {
             <div className="w-24 h-24 bg-gray-300" />
           </div>
         </div>
+        */}
       </div>
     </div>
   );

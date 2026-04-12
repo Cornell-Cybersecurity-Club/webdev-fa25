@@ -148,7 +148,7 @@ const Join = () => {
           
          <a href="https://docs.google.com/forms/u/0/" target="_blank" rel="noopener noreferrer" className="font-['Roboto_Mono'] text-[#CBC6C6] text-4xl font-bold underline decoration-[#CBC6C6] hover:decoration-white hover:text-white transition-colors duration-200 cursor-pointer">applications</a>
           <p className="font-['Roboto_Mono'] text-[#CBC6C6] text-3xl">
-            status: <span className="text-[#00FF00] font-bold">open</span>
+            status: <span className="text-[#FF0000] font-bold">closed</span>
           </p>
         </div>
       </div>

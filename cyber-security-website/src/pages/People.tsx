@@ -15,7 +15,7 @@ import linkIcon from "../assets/link2_icon.avif";
 
 const People = () => {
   return (
-    <div className="w-full min-h-screen overflow-x-hidden">
+    <div className="w-full min-h-screen overflow-hidden">
       <div className="text-center py-10 px-5 max-w-4xl mx-auto">
       <h1 className="mt-12 font-['Roboto_Mono'] text-[#E1DAD3] text-4xl mb-10 flex items-center justify-center gap-0.5">
         meet our team
