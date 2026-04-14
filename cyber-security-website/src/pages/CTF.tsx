@@ -20,7 +20,7 @@ const CTF = () => {
           <div className="border border-gray-400 rounded-xl p-6">
             <h3 className="text-red-400 text-lg font-bold">CyBear Day</h3>
 
-            <p className="text-sm text-gray-400 mb-4">14 April 2026</p>
+            <p className="text-sm text-gray-400 mb-4">18 April 2026</p>
 
 
             <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
