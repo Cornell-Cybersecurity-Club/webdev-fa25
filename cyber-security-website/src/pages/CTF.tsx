@@ -25,25 +25,10 @@ const CTF = () => {
 
             <div className="flex md:flex-row flex-wrap gap-5 justify-center items-center mt-2"> 
               <p className="text-gray-300 mb-4 mt-5">Get excited for a day of fun hacking at Cornell Cyber's first annual CyBear day! Compete in Jeopardy style or RvB competitions and win prizes! Food is provided.</p>
-              <a href="https://cglink.me/2ee/r2301185">Register Here</a>
+              <a href="https://cglink.me/2ee/r2301185" className="text-red-500">Register Here</a>
               <img src={cybearFlyer} alt="CyBear Day Flyer" className="object-cover" />
             </div>
           </div>
-
-          <div className="border border-gray-400 rounded-xl p-6">
-            <h3 className="text-red-400 text-lg font-bold">
-              ISTS
-            </h3>
-            <p className="text-sm text-gray-400 mb-4">7 June 2025</p>
-            <p className="text-gray-300 mb-4">The Information Security Talent Search (ISTS) competition is a 
-              purple teaming event hosted by RITSEC. At ISTS, teams not only defend infrastructure from an 
-              active red team similar to a traditional blue teaming event, but it also allows teams to attack 
-              other blue teams as well. ISTS also includes Capture the Flag (CTF) and King of the Hill (KotH) 
-              challenges. This multi-layered format forces participants to demonstrate a holistic mastery of 
-              cybersecurity, simultaneously managing enterprise-grade defense, strategic offense, and 
-              technical writing under pressure.</p>
-          </div>
-        </div>
 
         {/* Archived Events */}
         {/*
