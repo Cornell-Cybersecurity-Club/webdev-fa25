@@ -29,6 +29,7 @@ const CTF = () => {
               <img src={cybearFlyer} alt="CyBear Day Flyer" className="object-cover" />
             </div>
           </div>
+        </div>
 
         {/* Archived Events */}
         {/*
